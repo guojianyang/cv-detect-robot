@@ -18,7 +18,7 @@
 请参考ROS官方安装连接： [官方安装教程](http://wiki.ros.org/ROS/Installation)
 也可按以下步骤安装：
 
-    > sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+    - sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
     - sudo apt install curl # if you haven't already installed curl
     - curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
     - sudo apt update
@@ -85,20 +85,33 @@
  
  4. **yolov5-ros-deepstream文件夹下的内容如下图所示：**
  ![yolov5-ros-deepstream-dir](https://img-blog.csdnimg.cn/20210727110731217.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
- 文件夹下内容相关解释如下
+ - 文件夹下内容相关解释如下:
 
-    vdsinfer_custom_impl_Yolo--------------------------存放yolov5-ros-deepstream子项目的源码及被编译文件夹;
-    origin_yolov5------------------------------------------存放yolov5相关模型的引擎文件engine
-    video----------------------------------------------------存放被检测的相关视频文件;
-    config_infer_number_sv30.txt------------------------自定义的数字检测引擎number_v30.engnine的基础配置文件;
-    deepstream_app_number_sv30.txt------------------启动数字检测引擎number_v30.engnine的启动配置文件;
-    config_infer_primary.txt-------------------------------官方提供的yolov5s.engine引擎的基础配置文件;
-    deepstream_app_config.txt---------------------------官方提供的yolov5s.engine引擎的启动配置文件
-    abels.txt-------------------------------------------------官方提供的yolov5s.engine引擎的标签配置文件
-    number_v30.txt----------------------------------------自定义的数字检测引擎number_v30.engnin的标签配置文件    		 yolov5s.engine------------------------------------------yolov5s.pt模型的引擎文件
-    number_v30.engine------------------------------------number_v30s.pt模型的引擎文件
-    source1_csi_dec_infer_yolov5.txt--------------------启动csi摄像头实时检测
-    source1_usb_dec_infer_yolov5.txt--------------------启动csi摄像头实时检测
+>vdsinfer_custom_impl_Yolo--------------------------存放yolov5-ros-deepstream子项目的源码及被编译文件夹
+
+>origin_yolov5------------------------------------------存放yolov5相关模型的引擎文件engine
+
+>video----------------------------------------------------存放被检测的相关视频文件
+
+>config_infer_number_sv30.txt------------------------自定义的数字检测引擎number_v30.engnine的基础配置文件
+
+>deepstream_app_number_sv30.txt------------------启动数字检测引擎number_v30.engnine的启动配置文件
+
+>config_infer_primary.txt-------------------------------官方提供的yolov5s.engine引擎的基础配置文件
+
+>deepstream_app_config.txt---------------------------官方提供的yolov5s.engine引擎的启动配置文件
+
+>abels.txt-------------------------------------------------官方提供的yolov5s.engine引擎的标签配置文件
+
+>number_v30.txt----------------------------------------自定义的数字检测引擎number_v30.engnin的标签配置文件 
+
+>yolov5s.engine------------------------------------------yolov5s.pt模型的引擎文件
+
+>number_v30.engine------------------------------------number_v30s.pt模型的引擎文件
+
+>source1_csi_dec_infer_yolov5.txt--------------------启动csi摄像头实时检测
+
+>source1_usb_dec_infer_yolov5.txt--------------------启动csi摄像头实时检测
 
  5. **编译yolov5-ros-deepstream源码**
  > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros-deepstream
