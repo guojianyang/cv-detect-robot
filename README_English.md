@@ -84,7 +84,7 @@
  > cd /opt/nvidia/deepstream/deepstream-5.1/sources
  
  4. **yolov5-ros-deepstream文件夹下的内容如下图所示：**
- ![yolov5-ros-deepstream-dir](https://img-blog.csdnimg.cn/20210727110731217.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
+ ![yolov5-ros-deepstream-dir](https://img-blog.csdnimg.cn/20210727155442371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
  - 文件夹下内容相关解释如下:
 
 >vdsinfer_custom_impl_Yolo--------------------------存放yolov5-ros-deepstream子项目的源码及被编译文件夹
