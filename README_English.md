@@ -115,6 +115,7 @@
 
  5. **编译yolov5-ros-deepstream源码**
  > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros-deepstream
+
  > CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo
 ***
 ##  四、运行测试
