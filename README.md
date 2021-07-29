@@ -1,6 +1,6 @@
-#  cv-detect-ros(CDR)项目介绍
-**cv-detect-ros项目的立项宗旨**：为基于ROS机器人操作系统开发机器人、无人机、无人车等相关人工智能产品，且有视觉检测需求的开发者提供前沿高性能视觉检测及其相关算法的ros接口，搭建起技术落地的桥梁。
-（ **备注**）:已接入本项目的视觉检测算法都已经做好了ROS系统的适配，待相关软硬件环境搭建好后即可直接调用已定义好的ros话题消息获取目标检测实时数据。
+#  CDR(cv-detect-ros)项目介绍
+**CDR项目的立项宗旨**：高性能视觉检测及其相关算法赋能机器人行业，搭建起技术落地的桥梁。
+（ **备注**）:已接入本项目的`yolov5-ros-deepstream`已做好了ROS系统的适配，待相关软硬件环境搭建好后即可直接调用已定义好的ros话题消息获取目标检测实时数据。
 ***
 ***
 #  cv-detect-ros子项目(一)（yolov5-ros-deepstream）
@@ -99,6 +99,7 @@
 > 在该文件夹下有yolov5-ros目录，但是打开目录后没有发现下图中的`video`文件夹，这是由于`video`体量大，受到github上传容量限制，`video`视频文件可自行在以下百度网盘链接下载：
 
 > 链接: https://pan.baidu.com/s/1V_AftufqGdym4EEKJ0RnpQ  密码: fr8u
+ 
  5. **yolov5-ros文件夹下的内容如下图所示：**
  ![yolov5-ros-deepstream-dir](https://img-blog.csdnimg.cn/20210729113434540.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
  - 文件夹下内容相关解释如下:
@@ -148,7 +149,7 @@
 - 将boxes_ws工作空间添加环境变量
 > sudo gedit .bashrc
 
-> 打开.bashrc文件后，将`source ~/boxes_1_ws/devel/setup.bash`添加进去
+> 打开.bashrc文件后，将`source ~/boxes_ws/devel/setup.bash`添加进去
 
 ##  四、运行测试
 ###  １.运行number_v30.engine引擎测试视频文件夹video内的视频文件内的视频
@@ -158,11 +159,11 @@
 - 在启动ros节点前，先建立一个连接到~/boxes_ws/src/darknet_ros_msgs的软连接，以便导入相关话题消息
  > ln -s ~/boxes_ws/src/ darknet_ros_msgs  /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros/
  - 建立软连接后，即可运行client_ros.py文件(一定要用python2去运行python文件)
+ >  先按　`ctrl + alt +t` 进入终端,运行`roscore`
  > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
  > python2 clieny_ros.py
  - 若client_ros.py文件正常运行，命令框中会出现相应实时数据，该实时数据只是打印出来而已，并没有发布到ros topic中，可通过`ros topic list`命令查看是否有`boundingboxes_tensor`话题名称（正常情况下肯定有），再通过`ros topic echo /boundingboxes_tensor`去查看话题内容。
  > ros topic list 
-
  > ros topic echo /boundingboxes_tensor
  - 出现下图所示，说明运行成功
 ![enter image description here](https://img-blog.csdnimg.cn/20210729165855609.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
