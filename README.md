@@ -99,7 +99,6 @@
 > 在该文件夹下有yolov5-ros目录，但是打开目录后没有发现下图中的`video`文件夹，这是由于`video`体量大，受到github上传容量限制，`video`视频文件可自行在以下百度网盘链接下载：
 
 > 链接: https://pan.baidu.com/s/1V_AftufqGdym4EEKJ0RnpQ  密码: fr8u
- 
  5. **yolov5-ros文件夹下的内容如下图所示：**
  ![yolov5-ros-deepstream-dir](https://img-blog.csdnimg.cn/20210729113434540.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
  - 文件夹下内容相关解释如下:
@@ -163,12 +162,14 @@
  > python2 clieny_ros.py
  - 若client_ros.py文件正常运行，命令框中会出现相应实时数据，该实时数据只是打印出来而已，并没有发布到ros topic中，可通过`ros topic list`命令查看是否有`boundingboxes_tensor`话题名称（正常情况下肯定有），再通过`ros topic echo /boundingboxes_tensor`去查看话题内容。
  > ros topic list 
+
  > ros topic echo /boundingboxes_tensor
  - 出现下图所示，说明运行成功
 ![enter image description here](https://img-blog.csdnimg.cn/20210729165855609.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
 ###  ２.运行yolov5s.engine引擎测试视频文件夹video内的视频文件内的视频
 > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
 > deepstream-app -c deepstream_app_config.txt
+- ros的接入与（１）中一样
 ###  3.YOLOv5 USB摄像头视频测试命令
 > deepstream-app -c source1_usb_dec_infer_yolov5.txt
 ###  4.YOLOv5 CSI 摄像头视频测试命令
