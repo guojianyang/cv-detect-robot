@@ -164,6 +164,8 @@
  - 若client_ros.py文件正常运行，命令框中会出现相应实时数据，该实时数据只是打印出来而已，并没有发布到ros topic中，可通过`ros topic list`命令查看是否有`boundingboxes_tensor`话题名称（正常情况下肯定有），再通过`ros topic echo /boundingboxes_tensor`去查看话题内容。
  > ros topic list 
  > ros topic echo /boundingboxes_tensor
+ - 出现下图所示，说明运行成功
+![enter image description here](https://img-blog.csdnimg.cn/20210729165855609.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
 ###  ２.运行yolov5s.engine引擎测试视频文件夹video内的视频文件内的视频
 > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
 > deepstream-app -c deepstream_app_config.txt
