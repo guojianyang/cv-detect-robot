@@ -187,7 +187,7 @@ static bool NvDsInferParseYoloV5(
      
     /*-----------------below these code is taking the boundingboxes into memory of 'internal_memory.txt'----------------*/
     unsigned long int boundingboxes_len = objectlist_len*60 + 10;
-    int fd = open("/opt/nvidia/deepstream/deepstream-5.0/sources/yolov5/nvdsinfer_custom_impl_Yolo/internal_memory.txt",O_RDWR|O_CREAT, 00777);
+    int fd = open("/opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros/nvdsinfer_custom_impl_Yolo/internal_memory.txt",O_RDWR|O_CREAT, 00777);
     char* guo =(char*)(mmap(NULL, boundingboxes_len, PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0));
 
     //determine whether the memory is read successfully by the return-value 'MAP_FAILED'
