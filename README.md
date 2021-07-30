@@ -30,4 +30,4 @@
 
 > 详细教程请进入[yolov5-deepstream-cpp](https://github.com/guojianyang/cv-detect-ros/wiki/yolov5-deepstream-cpp)
 
-> > 最终视频检测效果请进入[yolov5-deepstream-cpp检测](https://www.bilibili.com/video/BV1yV411p7Dx/)
+> 最终视频检测效果请进入[yolov5-deepstream-cpp检测](https://www.bilibili.com/video/BV1yV411p7Dx/)
