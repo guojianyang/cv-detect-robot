@@ -1,0 +1,8 @@
+##由于受到github上传容量限制
+
+请通过以下百度网盘链接下载引擎文件夹engine_file(包含“number_v30.engine”和“yolov5s.engine”)：
+链接: https://pan.baidu.com/s/1xzR8UdZWM2dk3iqGWDG46Q  密码: 4e4d
+
+## or 或者　
+将yolov5-ros-deepstream/yolo5-ros文件夹下的引擎文件“number_v30.engine”和“yolov5s.engine”复制到本目录下
+
