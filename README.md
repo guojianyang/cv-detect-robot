@@ -1,4 +1,4 @@
-
+#  `中文版`------>请进入[CDR 项目中文版](https://github.com/guojianyang/cv-detect-robot/wiki/README.md-%28%E4%B8%AD%E6%96%87%E7%89%88%29)
 #  CDR(cv-detect-robot)   Project Introduction
 **CDR Project purpose**：High-performance visual inspection and related algorithms empower the robotics industry and build a bridge for technology landing.
 > **Remark(1)**: Connected to this subproject of `yolov5-ros-deepstream` that has been adapted for ROS system,after the relevant software and hardware environment is set up, you can directly call the defined ros topic messages to obtain real-time target detection data
