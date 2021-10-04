@@ -1,3 +1,4 @@
+![enter image description here](https://img-blog.csdnimg.cn/8109430661b34b37b41412595a0acd10.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 #  `Chinese Version`------>请进入[CDR 项目中文版](https://github.com/guojianyang/cv-detect-robot/wiki/README.md-%28%E4%B8%AD%E6%96%87%E7%89%88%29)
 #  CDR(cv-detect-robot)   Project Introduction
 **CDR Project purpose**：High-performance visual inspection and related algorithms empower the robotics industry and build a bridge for technology landing.
