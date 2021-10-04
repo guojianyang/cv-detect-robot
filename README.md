@@ -14,7 +14,7 @@
 -  `yolov5-ros-deepstream` subproject profile
 > The project is to combine the yolov5 vision detection algorithm with the neural network acceleration engine tensorRT, and run under the deepstream framework of NVIDIA, combined with the ros communication mechanism, to publish the detection data through the ros topic in real time. It is used by developers and related scientific researchers based on ROS robot operating system.
 
->For detailed tutorial, please enter--------->[yolov5-ros-deepstream](https://github.com/guojianyang/cv-detect-ros/wiki/yolov5-ros-deepstream)
+>For detailed tutorial, please enter--------->[yolov5-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/wiki/yolov5-ros-deepstream(English))
 
 >Please enter the final video detection effect--------->[yolov5-ros-deepstream--[detect video]](https://www.bilibili.com/video/BV1Lo4y1Q79C/)
 
