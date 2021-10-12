@@ -23,7 +23,7 @@
 -  `yolov5-deepstream-python` subproject profile
 >The project is to combine the visual detection algorithm yolov5 with the neural network acceleration engine tensorRT, and use shared memory technology to store the detected data in real time in a pre-defined physical memory (physical address is unique).On the same hardware platform In any software directory, create a `client.py` script file that reads the physical memory (it only contains a code segment for reading the memory),and read the data in the specified physical memory . On the premise that the reading is successful, the code segment can be inserted into any python project that needs target detection data, so that the python project can obtain the target detection data smoothly.
 
-> For detailed tutorial, please enter------>[yolov5-deepstream-python](https://github.com/guojianyang/cv-detect-ros/wiki/yolov5-deepstream-python)
+> For detailed tutorial, please enter------>[yolov5-deepstream-python](https://github.com/guojianyang/cv-detect-robot/wiki/yolov5-deepstream-python(English))
 
 > Please enter the final video detection effect------>[yolov5-deepstream-python--[detect video]](https://www.bilibili.com/video/BV1Uv411E755/)
 #  CDR子 subitem(3)（yolov5-deepstream-cpp）
