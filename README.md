@@ -1,35 +1,36 @@
+
 ![enter image description here](https://img-blog.csdnimg.cn/7007a6ec9d584018bdf289bd8987c45d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
-#  `Chinese Version`------>请进入[CDR 项目中文版](https://github.com/guojianyang/cv-detect-robot/wiki/README.md-%28%E4%B8%AD%E6%96%87%E7%89%88%29)
-#  CDR(cv-detect-robot)   Project Introduction
-**CDR Project purpose**：High-performance visual inspection and related algorithms empower the robotics industry and build a bridge for technology landing.
-> **Remark(1)**: Connected to this subproject of `yolov5-ros-deepstream` that has been adapted for ROS system,after the relevant software and hardware environment is set up, you can directly call the defined ros topic messages to obtain real-time target detection data
+#   `English Version`------>Please enter[CDR project English version](https://github.com/guojianyang/cv-detect-robot)
+#  CDR(cv-detect-robot)项目介绍
+**CDR项目立项宗旨**：高性能视觉检测及其相关算法赋能机器人行业，搭建起技术落地的桥梁。
+> （ **备注(1)**）:已接入本项目的`yolov5-ros-deepstream`已做好了ROS系统的适配，待相关软硬件环境搭建好后即可直接调用已定义好的ros话题消息获取目标检测实时数据。
 
->    **Remark(2)**:In the future, the **ppyolo algorithms** from Baidu's paddle ,**YOLOX** from MEGVII and A series of pixel-level target detection and tracking algorithms  will adapted for the CDR project.
+>   （ **备注(2)**）:后续将接入**百度paddle的ppyolo算法**、**旷世科技的YOLOX算法**和**一系列像素级目标检测及追踪算法**。
 
->   **Remark(３)**: As I and my team learn and grow, the project will be maintained and updated from time to time. Due to limited capabilities, there are errors and deficiencies in the project. I hope you can criticize and correct or leave a message in the `issue`.
+>   （ **备注(３)**）:随着本人及团队的学习成长，该项目会不定期进行维护和更新，由于能力有限，项目中存在错误和不足之处望各位批评指正或在`issue`中留言。
 
->   **Remark(4)**:In order to facilitate everyone to learn and communicate, the **CDR (cv-detect-robot) project** communication WeChat group has been established, please add the person in charge of the group `Xiao Guo`, WeChat ID:**17370042325** to facilitate your participation in the group(WeChat is the most common communication software in China).
+>   （ **备注(4)**）:为方便大家学习交流，已建立**CDR(cv-detect-robot)项目**交流微信群，请添加群负责人`小郭`微信号`17370042325`,以方便拉您进群。
 ***
 ***
-#  CDR subitem(1)（yolov5-ros-deepstream）
--  `yolov5-ros-deepstream` subproject profile
-> The project is to combine the yolov5 vision detection algorithm with the neural network acceleration engine tensorRT, and run under the deepstream framework of NVIDIA, combined with the ros communication mechanism, to publish the detection data through the ros topic in real time. It is used by developers and related scientific researchers based on ROS robot operating system.
+#  CDR子项目(一)（yolov5-ros-deepstream）
+-  yolov5-ros-deepstream 子项目简介
+> 该项目是将yolov5视觉检测算法与神经网络加速引擎tensorRT结合，并在英伟达的deepstream框架下运行，结合ros通信机制，将检测数据实时通过ros topic 发布出去。以供基于ROS机器人操作系统的开发人员及相关科研人员使用。
 
->For detailed tutorial, please enter--------->[yolov5-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/wiki/yolov5-ros-deepstream(English))
+>详细教程请进入[yolov5-ros-deepstream](https://github.com/guojianyang/cv-detect-ros/wiki/yolov5-ros-deepstream)
 
->Please enter the final video detection effect--------->[yolov5-ros-deepstream--[detect video]](https://www.bilibili.com/video/BV1Lo4y1Q79C/)
+>最终视频检测效果请进入[yolov5-ros-deepstream检测](https://www.bilibili.com/video/BV1Lo4y1Q79C/)
 
-#  CDR subitem(2)（yolov5-deepstream-python）
--  `yolov5-deepstream-python` subproject profile
->The project is to combine the visual detection algorithm yolov5 with the neural network acceleration engine tensorRT, and use shared memory technology to store the detected data in real time in a pre-defined physical memory (physical address is unique).On the same hardware platform In any software directory, create a `client.py` script file that reads the physical memory (it only contains a code segment for reading the memory),and read the data in the specified physical memory . On the premise that the reading is successful, the code segment can be inserted into any python project that needs target detection data, so that the python project can obtain the target detection data smoothly.
+#  CDR子项目(二)（yolov5-deepstream-python）
+-  yolov5-deepstream-python 子项目简介
+> 该项目是将视觉检测算法yolov5与神经网络加速引擎tensorRT结合,利用共享内存技术将检测所得到的数据实时储存到事先定义好的物理内存中（物理地址是唯一的），在同一硬件平台上的任意软件目录中，建立一个读取物理内存的`client.py`脚本文件（里面只包含一个读取内存的代码段），将指定好的物理内存中的数据读取出来，在读取成功的前提下，可将该代码段插入到任意需要目标检测数据的python项目中，从而使该python项目能顺利获取目标检测数据。
 
-> For detailed tutorial, please enter------>[yolov5-deepstream-python](https://github.com/guojianyang/cv-detect-robot/wiki/yolov5-deepstream-python(English))
+> 详细教程请进入[yolov5-deepstream-python](https://github.com/guojianyang/cv-detect-ros/wiki/yolov5-deepstream-python)
 
-> Please enter the final video detection effect------>[yolov5-deepstream-python--[detect video]](https://www.bilibili.com/video/BV1Uv411E755/)
-#  CDR子 subitem(3)（yolov5-deepstream-cpp）
-- `yolov5-deepstream-python` subproject profile
-> The project is to combine the visual detection algorithm yolov5 with the neural network acceleration engine tensorRT, and use shared memory technology to store the detected data in real time in a pre-defined physical memory (physical address is unique).On the same hardware platform In any software directory, create a file `yolov5_tensor.cpp` that reads the physical memory (it only contains a code segment that reads the memory). After compilation, the data in the specified physical memory can be read out. On the premise of successful reading, the code segment can be inserted into any C++ project that requires target detection data, so that the C++ project can obtain target detection data smoothly.
+> 最终视频检测效果请进入[yolov5-deepstream-python检测](https://www.bilibili.com/video/BV1Uv411E755/)
+#  CDR子项目(三)（yolov5-deepstream-cpp）
+- yolov5-deepstream-python 子项目简介
+> 该项目是将视觉检测算法yolov5与神经网络加速引擎tensorRT结合,利用共享内存技术将检测所得到的数据实时储存到事先定义好的物理内存中（物理地址是唯一的），在同一硬件平台上的任意软件目录中，建立一个读取物理内存的`yolov5_tensor.cpp`文件（里面只包含一个读取内存的代码段），编译后可将指定好的物理内存中的数据读取出来，在读取成功的前提下，可将该代码段插入到任意需要目标检测数据的C++项目中，从而使该C++项目能顺利获取目标检测数据。
 
-> For detailed tutorial, please enter-------->[yolov5-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/wiki/yolov5-deepstream-cpp(English))
+> 详细教程请进入[yolov5-deepstream-cpp](https://github.com/guojianyang/cv-detect-ros/wiki/yolov5-deepstream-cpp)
 
-> Please enter the final video detection effect-------->[yolov5-deepstream-cpp--[detect video]](https://www.bilibili.com/video/BV1yV411p7Dx/)
+> 最终视频检测效果请进入[yolov5-deepstream-cpp检测](https://www.bilibili.com/video/BV1yV411p7Dx/)
