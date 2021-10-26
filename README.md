@@ -28,9 +28,15 @@
 
 > 最终视频检测效果请进入[yolov5-deepstream-python检测](https://www.bilibili.com/video/BV1Uv411E755/)
 #  CDR子项目(三)（yolov5-deepstream-cpp）
-- yolov5-deepstream-python 子项目简介
+- yolov5-deepstream-cpp 子项目简介
 > 该项目是将视觉检测算法yolov5与神经网络加速引擎tensorRT结合,利用共享内存技术将检测所得到的数据实时储存到事先定义好的物理内存中（物理地址是唯一的），在同一硬件平台上的任意软件目录中，建立一个读取物理内存的`yolov5_tensor.cpp`文件（里面只包含一个读取内存的代码段），编译后可将指定好的物理内存中的数据读取出来，在读取成功的前提下，可将该代码段插入到任意需要目标检测数据的C++项目中，从而使该C++项目能顺利获取目标检测数据。
 
 > 详细教程请进入[yolov5-deepstream-cpp](https://github.com/guojianyang/cv-detect-ros/wiki/yolov5-deepstream-cpp)
 
 > 最终视频检测效果请进入[yolov5-deepstream-cpp检测](https://www.bilibili.com/video/BV1yV411p7Dx/)
+
+#  CDR子项目(四)（yolox-ros-deepstream）
+- yolox-ros-deepstream 子项目简介
+> 该项目是将视觉检测算法yolox与神经网络加速引擎tensorRT结合,利用共享内存技术将检测所得到的数据实时储存到事先定义好的物理内存中（物理地址是唯一的），在同一硬件平台上的任意软件目录中，建立一个读取物理内存的`yolox_tensor.cpp`文件（里面只包含一个读取内存的代码段），编译后可将指定好的物理内存中的数据读取出来，在读取成功的前提下，可将该代码段插入到任意需要目标检测数据的C++项目中，从而使该C++项目能顺利获取目标检测数据。
+
+> 详细教程请进入[yolox-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/wiki/yolox-ros-deepstream(CN))
