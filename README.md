@@ -35,7 +35,7 @@
 
 > 最终视频检测效果请进入[yolov5-deepstream-cpp检测](https://www.bilibili.com/video/BV1yV411p7Dx/)
 
-#  CDR子项目(四)（yolox-ros-deepstream）
+#  CDR子项目(四)（yolox-ros-deepstream）更新中...........
 - yolox-ros-deepstream 子项目简介
 > 该项目是将yolox视觉检测算法与神经网络加速引擎tensorRT结合，并在英伟达的deepstream框架下运行，结合ros通信机制，将检测数据实时通过ros topic 发布出去。以供基于ROS机器人操作系统的开发人员及相关科研人员使用。
 
