@@ -1,0 +1,27 @@
+[property]
+gpu-id=0
+net-scale-factor=1.0
+
+# 0:RGB 1:BGR
+model-color-format=1
+
+model-engine-file=yolox_s.engine
+
+labelfile-path=labels.txt
+num-detected-classes=80
+
+interval=0
+gie-unique-id=1
+process-mode=1
+
+# 0=Detector, 1=Classifier, 2=Segmentation, 100=Other
+network-type=0
+
+# 0：Group Rectange 1：DBSCAN 2：NMS 3:DBSCAN+NMS 4:None
+cluster-mode=4
+maintain-aspect-ratio=1
+parse-bbox-func-name=NvDsInferParseCustomYolox
+custom-lib-path=nvdsinfer_custom_impl_yolox/libnvdsinfer_custom_impl_yolox.so
+
+[class-attrs-all]
+pre-cluster-threshold=0.25
