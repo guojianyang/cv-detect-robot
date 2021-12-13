@@ -1,4 +1,5 @@
 #  CDR子项目(四)（yolox-ros-deepstream）
+## [中文] | [[English]](https://github.com/guojianyang/cv-detect-robot/blob/main/yolox-ros-deepstream/README_EN.md)
 ##  硬件环境
 - 英伟达jetson nano 板载计算机(原则上jetson 系列产品都能适配此项目)
 - 鼠标键盘（推荐使用有线连接方式）
