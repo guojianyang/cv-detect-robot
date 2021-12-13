@@ -1,4 +1,5 @@
 #  CDR Subitem(2)（yolov5-deepstream-python）
+## [English] | [[中文]](https://github.com/guojianyang/cv-detect-robot/blob/main/yolov5-deepstream-python/README.md)
 ##  Hardware environment
 - NVIDIA TX2 onboard computer
 - Mouse and keyboard (wired connection is recommended)
