@@ -16,7 +16,7 @@
 -  yolov5-ros-deepstream 子项目简介
 > 该项目是将yolov5视觉检测算法与神经网络加速引擎tensorRT结合，并在英伟达的deepstream框架下运行，结合ros通信机制，将检测数据实时通过ros topic 发布出去。以供基于ROS机器人操作系统的开发人员及相关科研人员使用。
 
->详细教程请进入[yolov5-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/blob/main/yolov5-ros-deepstream/README(%E4%B8%AD%E6%96%87).md)
+>详细教程请进入[yolov5-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/blob/main/yolov5-ros-deepstream/README.md)
 
 >最终视频检测效果请进入[yolov5-ros-deepstream检测](https://www.bilibili.com/video/BV1Lo4y1Q79C/)
 
