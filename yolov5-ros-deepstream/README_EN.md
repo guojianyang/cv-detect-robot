@@ -1,5 +1,5 @@
 #  CDR Subitem(1)（yolov5-ros-deepstream）
-## English | [中文](https://github.com/guojianyang/cv-detect-robot/blob/main/yolov5-ros-deepstream/README(%E4%B8%AD%E6%96%87).md)
+## English | [中文](https://github.com/guojianyang/cv-detect-robot/blob/main/yolov5-ros-deepstream/README_EN.md)
 ##  Hardware environment
 - NVIDIA TX2 onboard computer
 - Mouse and keyboard (wired connection is recommended)
