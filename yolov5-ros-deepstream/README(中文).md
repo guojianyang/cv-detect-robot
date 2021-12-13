@@ -1,5 +1,5 @@
 #  CDR子项目(一)（yolov5-ros-deepstream）
-## 中文 | [English](https://github.com/guojianyang/cv-detect-robot/edit/main/yolov5-ros-deepstream/README(English).md)
+## 中文 | [English](https://github.com/guojianyang/cv-detect-robot/edit/main/yolov5-ros-deepstream/README_EN.md)
 ##  硬件环境
 - 英伟达TX2板载计算机
 - 鼠标键盘（推荐使用有线连接方式）
