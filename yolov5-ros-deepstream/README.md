@@ -171,6 +171,7 @@
 ![enter image description here](https://img-blog.csdnimg.cn/20210729165855609.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
 ###  ２.运行yolov5s.engine引擎测试视频文件夹video内的视频文件内的视频
 > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
+
 > deepstream-app -c deepstream_app_config.txt
 - ros的接入与（１）中一样
 ###  3.YOLOv5 USB摄像头视频测试命令
