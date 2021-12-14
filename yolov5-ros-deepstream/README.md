@@ -156,6 +156,8 @@
 ##  四、运行测试
 ###  １.运行number_v30.engine引擎测试视频文件夹video内的视频文件内的视频
 > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
+
+
 > deepstream-app -c deepstream_app_number_sv30.txt
 - 正常运行`number_v30.engine`引擎后，会出现实时检测数字的视频流，在命令框里可看到运行帧率(FPS)
 - 在启动ros节点前，先建立一个连接到~/boxes_ws/src/darknet_ros_msgs的软连接，以便导入相关话题消息
