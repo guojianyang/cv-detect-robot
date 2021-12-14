@@ -42,3 +42,6 @@
 > 详细教程请进入[yolox-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-ros-deepstream)
 
 > 最终视频检测效果请进入[yolox-ros-deepstream检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
+#
+
+#  [CDR项目常见问题及其解决方案(Common problems and solutions)](https://github.com/guojianyang/cv-detect-robot/wiki/CDR%E9%A1%B9%E7%9B%AE%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(Common-problems-and-solutions))
