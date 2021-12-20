@@ -219,7 +219,7 @@ yolox-ros中的文件内容如下图所示：
   - 将src下功能包darknet_ros_msgs建立软连接至/opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/目录下
   > cd ~/boxes_ws/src 
   > 
-  > ln -s ~/boxes_ws/src/ darknet_ros_msgs  /opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/
+  > ln -s ~/boxes_ws/src/darknet_ros_msgs  /opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/
   - 测试ros接口是否成功建立
   > cd /opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/
   
