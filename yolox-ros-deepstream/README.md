@@ -212,7 +212,6 @@ yolox-ros中的文件内容如下图所示：
   - 编译
   > catkin_make
   - 编译成功后，需将boxes_ws工作空间添加环境变量
-  > sudo gedit ~/.bashrc
 
   > echo  "source ~/boxes_ws/devel/setup.bash" >> ~/.bashrc
 
