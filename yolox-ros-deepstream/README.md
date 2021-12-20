@@ -202,8 +202,8 @@ yolox-ros中的文件内容如下图所示：
 	    static const int INPUT_H = 416; //640;
 	然后在进行编译
   6. **搭建自定义的rostpoic话题消息的工作空间boxes_ws，建立ros接口**
-  - 将git clone 的文件夹cv-detect-ros/yolovx-ros-deepstream/boxes_ws复制到home目录下
-  > sudo cp -r ~/cv-detect-ros/yolox-ros-deepstream/boxes_ws ~/
+  - 将git clone 的文件夹cv-detect-robot/yolovx-ros-deepstream/boxes_ws复制到home目录下
+  > sudo cp -r ~/cv-detect-robot/yolox-ros-deepstream/boxes_ws ~/
   - 进入boxes_ws文件夹，编译ros工作空间
   > cd ~/boxes_ws
 
@@ -221,7 +221,7 @@ yolox-ros中的文件内容如下图所示：
   > cd ~/boxes_ws/src 
   > ln -s ~/boxes_ws/src/ darknet_ros_msgs  /opt/nvidia/deepstream/deepstream-5.1/sources/yolovx-ros/
   - 测试ros接口是否成功建立
-  > cd /opt/nvidia/deepstream/deepstream-5.1/sources/yolovx-ros/
+  > cd /opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/
   
 	  在当前目录终端下运行`python2`(一定要python2),并导入以下功能包：
   
