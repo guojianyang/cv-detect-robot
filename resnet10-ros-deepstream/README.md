@@ -253,7 +253,9 @@
       > python3 deepstream-test_7.py
       
       命令行终端出现目标相关数据输出且跳出实时检测图像说明测试成功，以下时测试效果视频链接：
+      
       [resnet10-ros-deepstream x_86-docker测试](https://www.bilibili.com/video/BV1Xm4y1X7X2/)
+      
 - 如何搭建ros接口请参考 本文档第一部分《Jetson Nano 平台运行指导教程》
       
        
