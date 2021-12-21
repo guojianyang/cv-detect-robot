@@ -1,0 +1,65 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/amov/boxes_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5a787/fast && /usr/bin/make  -f CMakeFiles/cmTC_5a787.dir/build.make CMakeFiles/cmTC_5a787.dir/build
+make[1]: Entering directory '/home/amov/boxes_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a787.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5a787.dir/src.c.o -c /home/amov/boxes_ws/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5a787
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a787.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_5a787.dir/src.c.o -o cmTC_5a787 
+CMakeFiles/cmTC_5a787.dir/src.c.o: In function `main':
+src.c:(.text+0x48): undefined reference to `pthread_create'
+src.c:(.text+0x50): undefined reference to `pthread_detach'
+src.c:(.text+0x58): undefined reference to `pthread_cancel'
+src.c:(.text+0x64): undefined reference to `pthread_join'
+src.c:(.text+0x74): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5a787.dir/build.make:98: recipe for target 'cmTC_5a787' failed
+make[1]: *** [cmTC_5a787] Error 1
+make[1]: Leaving directory '/home/amov/boxes_ws/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_5a787/fast' failed
+make: *** [cmTC_5a787/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amov/boxes_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8b994/fast && /usr/bin/make  -f CMakeFiles/cmTC_8b994.dir/build.make CMakeFiles/cmTC_8b994.dir/build
+make[1]: Entering directory '/home/amov/boxes_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b994.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_8b994.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8b994
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b994.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_8b994.dir/CheckFunctionExists.c.o -o cmTC_8b994  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8b994.dir/build.make:98: recipe for target 'cmTC_8b994' failed
+make[1]: *** [cmTC_8b994] Error 1
+make[1]: Leaving directory '/home/amov/boxes_ws/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_8b994/fast' failed
+make: *** [cmTC_8b994/fast] Error 2
+
+
+
