@@ -172,7 +172,9 @@
          
   ####  5．介绍配置文件，并执行deepstream推理程序
  - deepstream-test7目录下文件介绍
+ 
  ![在这里插入图片描述](https://img-blog.csdnimg.cn/be54c17437a246b4833deabd0755d000.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
+ 
     - ①-- 发布检测的目标及其跟踪数据的ros节点
     - ②-- deepstream推理主程序
     - ③-- 一级推理模型：检测四类目标(行人、自行车、车辆、路标)
