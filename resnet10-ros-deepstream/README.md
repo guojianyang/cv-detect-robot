@@ -1,5 +1,5 @@
 #  CDR子项目(五)（resnet10-ros-deepstream）
-## [中文] | [[English]](https://github.com/guojianyang/cv-detect-robot/blob/main/yolox-ros-deepstream/README_EN.md)
+## [中文] | [English]
 ****
 ****
 ## 一、Jetson Nano 平台运行指导教程
