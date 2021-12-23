@@ -235,7 +235,7 @@
       - [nvidia-docker2 安装](https://www.cnblogs.com/liudsl/p/15272297.html)
       - [NVidia-Docker2安装与常用命令](https://www.cnblogs.com/jimchen1218/p/14186262.html)
   - 下载团队配置好的镜像文件并导入docker
-         镜像链接如下：---------------------------------------------------------------------------------------------------------------
+         镜像链接如下：https://pan.baidu.com/s/1M9rmdBjUwNuxCcvzAytBAQ h9y1
      - 镜像文件为tar文件，在该文件目录下打开终端，并执行如下命令(其中`file_name`为文件名)：
          > sudo docker load -i file_name.tar
         
@@ -255,8 +255,6 @@
       命令行终端出现目标相关数据输出且跳出实时检测图像说明测试成功，以下时测试效果视频链接：
       
       [resnet10-ros-deepstream x_86-docker测试](https://www.bilibili.com/video/BV1Xm4y1X7X2/)
-      
-- 如何搭建ros接口请参考 本文档第一部分《Jetson Nano 平台运行指导教程》
       
        
          
