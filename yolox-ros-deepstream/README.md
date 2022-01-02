@@ -122,7 +122,7 @@
 	
 			> cd protobuf-3.17.3
 			
-		        >./autogen.sh
+		        > ./autogen.sh
 		        
 		        > ./configure
 		        
