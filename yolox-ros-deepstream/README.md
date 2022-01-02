@@ -122,7 +122,8 @@
 	
 			    cd protobuf-3.17.3
 		        ./autogen.sh
-		        ./configuremake
+		        ./configure
+			make
 		        sudo make install
 		        sudo ldconfig
 		        protoc --version
