@@ -120,10 +120,10 @@
 
 	-  	执行以下命令（其中`sudo make install` 等待时间较长）
 	
-			    cd protobuf-3.17.3
+			cd protobuf-3.17.3
 		        ./autogen.sh
 		        ./configure
-			make
+			 make
 		        sudo make install
 		        sudo ldconfig
 		        protoc --version
