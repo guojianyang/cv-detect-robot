@@ -93,14 +93,18 @@
  2. 安装cmake
 	-  删除原来的cmake
 	> 	sudo apt remove cmake 
+	
 	> sudo apt purge --auto-remove cmake
 	- 下载所需版本,解压
 	> tar -xzvf cmake-3.21.2.tar.gz
+	
 	> cd ~/cmake-3.21.2
 	- 编译安装
 		执行命令......
 	> ./bootstrap
+	
 	> make -j4
+	
 	> sudo make install
 	
 	- 如果编译安装cmake时如果出现错误:could not find OpenSSL,执行
