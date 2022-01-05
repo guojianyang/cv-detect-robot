@@ -74,7 +74,7 @@
 - yolox-deepstream-cpp 子项目简介
 > 该项目是将yolox视觉检测算法与神经网络加速引擎tensorRT结合，本子项目采另一种引擎文件生成方法，通过onnx转到engine，此方法更具灵活性，也越来越稳定，符合行业主流发展趋势，在英伟达的deepstream框架下运行，在同一硬件平台上的任意软件目录中，建立一个读取物理内存的`yolox_tensor.cpp`文件（里面只包含一个读取内存的代码段），编译后可将指定好的物理内存中的数据读取出来，在读取成功的前提下，可将该代码段插入到任意需要目标检测数据的C++项目中，从而使该C++项目能顺利获取目标检测数据。
 
-> 详细教程请进入[yolox-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-ros-deepstream)
+> 详细教程请进入[yolox-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-deepstream-cpp)
 
 > 最终视频检测效果请进入[yolox-deepstream-cpp检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
 
