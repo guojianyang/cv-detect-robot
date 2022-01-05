@@ -1,6 +1,6 @@
 ![enter image description here](https://img-blog.csdnimg.cn/7007a6ec9d584018bdf289bd8987c45d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 #   [中文] | [[English]](https://github.com/guojianyang/cv-detect-robot/blob/main/README_EN.md)
-#  CDR(cv-detect-robot)项目介绍-------（工业级视觉算法侧端部署）
+#  CDR(cv-detect-robot)项目介绍🔥🔥🔥（工业级视觉算法侧端部署）
 **CDR项目立项宗旨**：高性能视觉检测及其相关算法赋能机器人行业，搭建起技术落地的桥梁。
 > （ **备注(1)**）:已接入本项目的`yolov5-ros-deepstream`和`yolox-ros-deepstream`已做好了ROS系统的适配，待相关软硬件环境搭建好后即可直接调用已定义好的ros话题消息获取目标检测实时数据。
 
