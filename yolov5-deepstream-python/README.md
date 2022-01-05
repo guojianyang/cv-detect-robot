@@ -77,25 +77,25 @@
 若能生成相关engine引擎并启动视频流检测，则说明DeepStream SDK安装成功,如下图所示：
 ![guo](https://img-blog.csdnimg.cn/20210728142452372.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)![enter image description here](https://img-blog.csdnimg.cn/20210728142507966.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
 ***
-## 三、从github克隆`cv-detect-ros`项目，并将本人设计好的`yolov5-deepstream-python`子项目的相关子文件夹拷贝到相应目录下进行编译
+## 三、从github克隆`cv-detect-robot`项目，并将本人设计好的`yolov5-deepstream-python`子项目的相关子文件夹拷贝到相应目录下进行编译
 
- 1. **从github克隆`cv-detect-ros`项目**（建议在搭建梯子的环境下进行git clone）
+ 1. **从github克隆`cv-detect-robot`项目**（建议在搭建梯子的环境下进行git clone）
  > 先按　`ctrl + alt +t` 进入终端（默认克隆的文件在家目录下）
 
-> git clone  https://github.com/guojianyang/cv-detect-ros.git
+> git clone  -b v3.0 https://github.com/guojianyang/cv-detect-ros.git
 
  2. **首先对我们所要操作的文件夹赋予权限**
 
 > sudo chmod -R 777 /opt/nvidia/deepstream/deepstream-5.0/sources/
- 3. **再拷贝cv-detect-ros/yolov5-deepstream-python/yolov5-ros文件夹到opt/nvidia/deepstream/deepstream-5.０/sources/**
->sudo cp ~/cv-detect-ros/yolov5-deepstream-python/yolov5-ros /opt/nvidia/deepstream/deepstream-5.０/sources/
+ 3. **再拷贝cv-detect-ros/yolov5-deepstream-python/yolov5-io-python文件夹到opt/nvidia/deepstream/deepstream-5.０/sources/**
+>sudo cp ~/cv-detect-ros/yolov5-deepstream-python/yolov5-io-python /opt/nvidia/deepstream/deepstream-5.０/sources/
  4. **然后进入拷贝的目标文件夹 /opt/nvidia/deepstream/deepstream-5.０/sources/**
  > cd /opt/nvidia/deepstream/deepstream-5.0/sources
 
-> 在该文件夹下有yolov5-ros目录，但是打开目录后没有发现下图中的`video`文件夹，这是由于`video`体量大，受到github上传容量限制，`video`视频文件可自行在以下百度网盘链接下载：
+> 在该文件夹下有yolov5-io-python目录，但是打开目录后没有发现下图中的`video`文件夹，这是由于`video`体量大，受到github上传容量限制，`video`视频文件可自行在以下百度网盘链接下载：
 
 > 链接: https://pan.baidu.com/s/1V_AftufqGdym4EEKJ0RnpQ  密码: fr8u
- 5. **yolov5-ros文件夹下的内容如下图所示：**
+ 5. **yolov5-io-python文件夹下的内容如下图所示：**
 
 
  ![yolov5-ros-deepstream-dir](https://img-blog.csdnimg.cn/2021073014310356.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
@@ -125,21 +125,18 @@
 
 >source1_usb_dec_infer_yolov5.txt--------------------启动csi摄像头实时检测
 
- ６. **通过download_engine.txt文本下载“number_v30.engnine”和“yolov5s.engine”引擎**
+6. **下载引擎文件**
+
  > 由于受到github上传容量限制
 >
-> `请通过以下百度网盘链接下载引擎文件夹engine_file(包含“number_v30.engine”和“yolov5s.engine”)：
->链接: https://pan.baidu.com/s/1xzR8UdZWM2dk3iqGWDG46Q  密码: 4e4d`
->
->`或者
->将yolov5-ros-deepstream/yolo5-ros文件夹下的引擎文件“number_v30.engine”和“yolov5s.engine”复制到本目录下`
+> `请通过以下百度网盘链接下载引擎文件夹Jetson_engine(包含Nano_engine和NX_engine)：
 
-- **备注**：生成number_v30.engine引擎文件的原模型number_v30.pt文件放于以下链接中，因为引擎文件在非同一硬件平台可能会出现问题，如项目中自带的引擎文件运行报错，可通过number_v30.pt生成新的number_v30.engine引擎文件。
-链接: https://pan.baidu.com/s/1DlCddhAIzpLGPwzV_c8_-w  密码: pk1b
+- **备注**：生成引擎文件的原模型pt或wts文件放于以下链接中，因为引擎文件在非同一硬件平台可能会出现问题，如以上下载的引擎文件运行报错，可通过pt和wts文件生成新的engine引擎文件。
+链接: https://pan.baidu.com/s/11AadDRDod8zlmlye5w4Msg?pwd=6a76  密码: 6a76
 
 
- ７. **编译yolov5-deepstream-python/yolov5-ros源码**
- > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
+ 7. **编译yolov5-deepstream-python/yolov5-io-python源码**
+ > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-io-python/
 
  > CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo
 
@@ -147,7 +144,7 @@
 
 ##  四、运行测试
 ###  １.运行number_v30.engine引擎测试视频文件夹video内的视频文件内的视频
-> cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
+> cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-io-python
 > deepstream-app -c deepstream_app_number_sv30.txt
 - 正常运行`number_v30.engine`引擎后，会出现实时检测数字的视频流，在命令框里可看到运行帧率(FPS)
 - 启动 client.py脚本读取目标检测数据并打印出来(建议使用python2做运行 client.py)
@@ -156,7 +153,7 @@
 ![enter image description here](https://img-blog.csdnimg.cn/20210730113208984.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
 
 ###  ２.运行yolov5s.engine引擎测试视频文件夹video内的视频文件内的视频
-> cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
+> cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-io-python
 > deepstream-app -c deepstream_app_config.txt
 ###  3.YOLOv5 USB摄像头视频测试命令
 > deepstream-app -c source1_usb_dec_infer_yolov5.txt

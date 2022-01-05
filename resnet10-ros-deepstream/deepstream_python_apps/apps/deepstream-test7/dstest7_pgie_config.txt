@@ -60,19 +60,16 @@
 [property]
 gpu-id=0
 net-scale-factor=0.0039215697906911373
-
 model-file=../../../../samples/models/Primary_Detector/resnet10.caffemodel
 proto-file=../../../../samples/models/Primary_Detector/resnet10.prototxt
-model-engine-file=../../../../samples/models/Primary_Detector/resnet10.caffemodel_b1_gpu0_fp16.engine
+model-engine-file=../../../../samples/models/Primary_Detector/resnet10.caffemodel_b1_gpu0_int8.engine
 labelfile-path=../../../../samples/models/Primary_Detector/labels.txt
-
+#int8-calib-file=../../../../samples/models/Primary_Detector/cal_trt.bin
 force-implicit-batch-dim=1
 batch-size=1
-network-mode=2
-process-mode=1
-model-color-format=0
+network-mode=1
 num-detected-classes=4
-interval=5
+interval=1
 gie-unique-id=1
 output-blob-names=conv2d_bbox;conv2d_cov/Sigmoid
 
@@ -80,6 +77,7 @@ output-blob-names=conv2d_bbox;conv2d_cov/Sigmoid
 #scaling-compute-hw=0
 
 [class-attrs-all]
-pre-cluster-threshold=0.2
+pre-cluster-threshold=0.4
 eps=0.2
 group-threshold=1
+

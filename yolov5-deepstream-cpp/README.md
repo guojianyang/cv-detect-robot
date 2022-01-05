@@ -4,12 +4,12 @@
 - 英伟达TX2板载计算机
 - 鼠标键盘（推荐使用有线连接方式）
 ##  软件环境
-- Jetpack  4.5 （ubuntu 18.04）
+- Jetpack  4.5.1 （ubuntu 18.04）
 - TensorRT  7.1
 - CUDA  10.2
 - cuDNN  8.0
 - OpenCV  4.1.1
-- deepstream  5.0
+- deepstream  5.1
 ##  一、安装ROS操作系统
 **备注**：（以下操作最好在搭建梯子或者更换国内源的情况下进行，否则下载速度很慢）
 
@@ -31,8 +31,8 @@
 - 以上步骤执行完成后，可尝试在终端运行`roscore`命令，若出现下图所示，说明ros安装正常：
 ![enter image description here](https://img-blog.csdnimg.cn/20210728132459897.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
 ***
-##  二、安装DeepStream on TX2(Jetpack 4.5)
-(**备注**):若使用SDKManager软件对TX2进行刷机，且刷入系统时选择了DeepStream 5.0选项，便会自动安装		DeepStream，无需进行以下手动安装。
+##  二、安装DeepStream on TX2(Jetpack 4.5.1)
+(**备注**):若使用SDKManager软件对TX2进行刷机，且刷入系统时选择了DeepStream 5.1选项，便会自动安装		DeepStream，无需进行以下手动安装。
 ###  １．安装依赖
 执行下面命令来安装需要的软件包：
 
@@ -48,12 +48,12 @@
 	libjansson4=2.11-1
 ###  ２．安装 DeepStream SDK
 
- （１）进入[官方DeepStream SDK](https://developer.nvidia.com/embedded/deepstream-on-jetson-downloads-archived)选择`DeepStream 5.0 for Jetson`并下载(Jetpack 4.5 向下兼容)
+ （１）进入[官方DeepStream SDK](https://developer.nvidia.com/embedded/deepstream-on-jetson-downloads-archived)选择`DeepStream 5.1 for Jetson`并下载(Jetpack 4.5.1 向下兼容)
 ![enter image description here](https://img-blog.csdnimg.cn/20210727094413306.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
- （２）下载后得到压缩文件`deepstream_sdk_5.0_jetson.tbz2`，输入以下命令以提取并安装DeepStream SDK:
+ （２）下载后得到压缩文件`deepstream_sdk_5.1_jetson.tbz2`，输入以下命令以提取并安装DeepStream SDK:
 
-    sudo tar -xvf deepstream_sdk_5.0_jetson.tbz2 -C /
-    cd /opt/nvidia/deepstream/deepstream-5.０
+    sudo tar -xvf deepstream_sdk_5.1_jetson.tbz2 -C /
+    cd /opt/nvidia/deepstream/deepstream-5.1
     sudo ./install.sh
     sudo ldconfig
     
@@ -61,7 +61,7 @@
  （３） DeepStream测试
  - 执行以下命令：
 
-> cd /opt/nvidia/deepstream/deepstream-5.０/sources/objectDetector_Yolo
+> cd /opt/nvidia/deepstream/deepstream-5.1/sources/objectDetector_Yolo
  - 执行编译命令
 >`sudo  CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo`
 	出现如下图所示结果，说明编译成功：
@@ -82,20 +82,20 @@
  1. **从github克隆`cv-detect-ros`项目**（建议在搭建梯子的环境下进行git clone）
  > 先按　`ctrl + alt +t` 进入终端（默认克隆的文件在家目录下）
 
-> git clone  https://github.com/guojianyang/cv-detect-ros.git
+> git clone  -b v3.0 https://github.com/guojianyang/cv-detect-ros.git
 
  2. **首先对我们所要操作的文件夹赋予权限**
 
-> sudo chmod -R 777 /opt/nvidia/deepstream/deepstream-5.0/sources/
- 3. **再拷贝cv-detect-ros/yolov5-deepstream-cpp/yolov5-ros文件夹到opt/nvidia/deepstream/deepstream-5.０/sources/**
->sudo cp ~/cv-detect-ros/yolov5-deepstream-cpp/yolov5-ros /opt/nvidia/deepstream/deepstream-5.０/sources/
- 4. **然后进入拷贝的目标文件夹 /opt/nvidia/deepstream/deepstream-5.０/sources/**
+> sudo chmod -R 777 /opt/nvidia/deepstream/deepstream-5.1/sources/
+ 3. **再拷贝cv-detect-ros/yolov5-deepstream-cpp/yolov5-io-cpp文件夹到opt/nvidia/deepstream/deepstream-5.1/sources/**
+>sudo cp ~/cv-detect-robot/yolov5-deepstream-cpp/yolov5-io-cpp /opt/nvidia/deepstream/deepstream-5.1/sources/
+ 4. **然后进入拷贝的目标文件夹 /opt/nvidia/deepstream/deepstream-5.1/sources/**
  > cd /opt/nvidia/deepstream/deepstream-5.0/sources
 
-> 在该文件夹下有yolov5-ros目录，但是打开目录后没有发现下图中的`video`文件夹，这是由于`video`体量大，受到github上传容量限制，`video`视频文件可自行在以下百度网盘链接下载：
+> 在该文件夹下有yolov5-io-cpp目录，但是打开目录后没有发现下图中的`video`文件夹，这是由于`video`体量大，受到github上传容量限制，`video`视频文件可自行在以下百度网盘链接下载：
 
 > 链接: https://pan.baidu.com/s/1V_AftufqGdym4EEKJ0RnpQ  密码: fr8u
- 5. **yolov5-ros文件夹下的内容如下图所示：**
+ 5. **yolov5-io-cpp文件夹下的内容如下图所示：**
 
 
  ![yolov5-ros-deepstream-dir](https://img-blog.csdnimg.cn/2021073014310356.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
@@ -123,25 +123,21 @@
 
 >source1_usb_dec_infer_yolov5.txt--------------------启动csi摄像头实时检测
 
- 6. **通过download_engine.txt文本下载“number_v30.engnine”和“yolov5s.engine”引擎**
+ 6. **下载引擎文件**
  > 由于受到github上传容量限制
 >
-> `请通过以下百度网盘链接下载引擎文件夹engine_file(包含“number_v30.engine”和“yolov5s.engine”)：
->链接: https://pan.baidu.com/s/1xzR8UdZWM2dk3iqGWDG46Q  密码: 4e4d`
->
->`或者
->将yolov5-ros-deepstream/yolo5-ros文件夹下的引擎文件“number_v30.engine”和“yolov5s.engine”复制到本目录下`
+> `请通过以下百度网盘链接下载引擎文件夹Jetson_engine(包含Nano_engine和NX_engine)：
 
-- **备注**：生成number_v30.engine引擎文件的原模型number_v30.pt文件放于以下链接中，因为引擎文件在非同一硬件平台可能会出现问题，如项目中自带的引擎文件运行报错，可通过number_v30.pt生成新的number_v30.engine引擎文件。
-链接: https://pan.baidu.com/s/1DlCddhAIzpLGPwzV_c8_-w  密码: pk1b
- 7. **编译yolov5-ros-deepstream/yolov5-ros源码**
- > cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
+- **备注**：生成引擎文件的原模型pt或wts文件放于以下链接中，因为引擎文件在非同一硬件平台可能会出现问题，如以上下载的引擎文件运行报错，可通过pt和wts文件生成新的engine引擎文件。
+链接: https://pan.baidu.com/s/11AadDRDod8zlmlye5w4Msg?pwd=6a76  密码: 6a76
+ 7. **编译yolov5-deepstream-cpp/yolov5-io-cpp源码**
+ > cd /opt/nvidia/deepstream/deepstream-5.1/sources/yolov5-io-cpp
 
  > CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo
 
 ##  四、运行测试
-###  １.运行number_v30.engine引擎测试视频文件夹video内的视频文件内的视频
-> cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
+###  １.运行yolov5s.engine引擎测试视频文件夹video内的视频文件内的视频
+> cd /opt/nvidia/deepstream/deepstream-5./sources/yolov5-io-cpp/
 
 > deepstream-app -c deepstream_app_number_sv30.txt
 - 正常运行`number_v30.engine`引擎后，会出现实时检测数字的视频流，在命令框里可看到运行帧率(FPS)
@@ -154,10 +150,11 @@
 ![enter image description here](https://img-blog.csdnimg.cn/20210730113220564.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjQzODU3Ng==,size_16,color_FFFFFF,t_70)
 
 ###  ２.运行yolov5s.engine引擎测试视频文件夹video内的视频文件内的视频
-> cd /opt/nvidia/deepstream/deepstream-5.0/sources/yolov5-ros
+> cd /opt/nvidia/deepstream/deepstream-5.1/sources/yolov5-io-cpp
 
 > deepstream-app -c deepstream_app_config.txt
 ###  3.YOLOv5 USB摄像头视频测试命令
 > deepstream-app -c source1_usb_dec_infer_yolov5.txt
 ###  4.YOLOv5 CSI 摄像头视频测试命令
 > deepstream-app -c source1_csi_dec_infer_yolov5.txt
+

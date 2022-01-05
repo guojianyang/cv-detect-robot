@@ -45,8 +45,8 @@
 #define BBOX_CONF_THRESH 0.3
 
 
-static const int INPUT_W = 640;
-static const int INPUT_H = 640;
+static const int INPUT_W = 416; //640
+static const int INPUT_H = 416; //640
 const char* INPUT_BLOB_NAME = "images";
 const char* OUTPUT_BLOB_NAME = "output";
 
@@ -285,7 +285,6 @@ static bool NvDsInferParseYolox(
     int img_h = 1080;
     float scale = std::min(INPUT_W / (img_w*1.0), INPUT_H / (img_h*1.0));
     decode_outputs(prob, objects, scale, img_w, img_h);
-    std::cout<<"guojianyang"<<std::endl;
     for(auto& r : objects) {
 	    NvDsInferParseObjectInfo oinfo;
         
@@ -361,7 +360,7 @@ static bool NvDsInferParseYolox(
      
     /*-----------------below these code is taking the boundingboxes into memory of 'internal_memory.txt'----------------*/
     unsigned long int boundingboxes_len = objectlist_len*60 + 10;
-    int fd = open("/opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/nvdsinfer_custom_impl_yolox/internal_memory.txt",O_RDWR|O_CREAT, 00777);
+    int fd = open("/opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/nvdsinfer_custom_impl_yolox/internal_memory.txt",O_RDWR|O_CREAT, 0777);
     char* guo =(char*)(mmap(NULL, boundingboxes_len, PROT_READ|PROT_WRITE, MAP_SHARED, fd, 0));
 
     //determine whether the memory is read successfully by the return-value 'MAP_FAILED'

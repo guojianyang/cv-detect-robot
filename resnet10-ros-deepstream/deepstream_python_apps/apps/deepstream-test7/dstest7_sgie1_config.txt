@@ -62,34 +62,24 @@ gpu-id=0
 net-scale-factor=1
 model-file=../../../../samples/models/Secondary_CarColor/resnet18.caffemodel
 proto-file=../../../../samples/models/Secondary_CarColor/resnet18.prototxt
-model-engine-file=../../../../samples/models/Secondary_CarColor/resnet18.caffemodel_b16_gpu0_fp32.engine
+model-engine-file=../../../../samples/models/Secondary_CarColor/resnet18.caffemodel_b16_gpu0_int8.engine
 mean-file=../../../../samples/models/Secondary_CarColor/mean.ppm
 labelfile-path=../../../../samples/models/Secondary_CarColor/labels.txt
-int8-calib-file=../../../../samples/models/Secondary_CarColor/cal_trt.bin
-
+#int8-calib-file=../../../../samples/models/Secondary_CarColor/cal_trt.bin
 force-implicit-batch-dim=1
 batch-size=16
 # 0=FP32 and 1=INT8 mode
-network-mode=0
+network-mode=1
 input-object-min-width=64
 input-object-min-height=64
 process-mode=2
 model-color-format=1
 gpu-id=0
-
-#本模型的id号
 gie-unique-id=2
-
-#接收哪个推理模型输出的数据
 operate-on-gie-id=1
-
-#所检测的类别id（PGIE_CLASS_ID_VEHICLE = 0）
 operate-on-class-ids=0
 is-classifier=1
-
-# 输出层
 output-blob-names=predictions/Softmax
-
 classifier-async-mode=1
 classifier-threshold=0.51
 process-mode=2
