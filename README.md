@@ -31,7 +31,9 @@
 >详细教程请进入[yolov5-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/blob/main/yolov5-ros-deepstream)
 
 >最终视频检测效果请进入[yolov5-ros-deepstream检测](https://www.bilibili.com/video/BV1Lo4y1Q79C/)
+>
 >加入目标跟踪器视频检测效果请进入[Jetson NX yolov5-ros-deepstream+目标跟踪](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
+>
 >加入目标跟踪器视频检测效果请进入[Jetson Nano yolov5-ros-deepstream+目标跟踪](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
 #  CDR子项目(二)（yolov5-deepstream-python）
@@ -41,7 +43,9 @@
 > 详细教程请进入[yolov5-deepstream-python](https://github.com/guojianyang/cv-detect-robot/tree/main/yolov5-deepstream-python)
 
 > 最终视频检测效果请进入[yolov5-deepstream-python检测](https://www.bilibili.com/video/BV1Uv411E755/)
+> 
 >加入目标跟踪器视频检测效果请进入[Jetson NX yolov5-python-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
+>
 >加入目标跟踪器视频检测效果请进入[Jetson Nano yolov5-python-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
 #  CDR子项目(三)（yolov5-deepstream-cpp）
@@ -51,7 +55,9 @@
 > 详细教程请进入[yolov5-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/tree/main/yolov5-deepstream-cpp)
 
 > 最终视频检测效果请进入[yolov5-deepstream-cpp检测](https://www.bilibili.com/video/BV1yV411p7Dx/)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson NX yolov5-cpp-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson Nano yolov5-cpp-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
 #  CDR子项目(四)（yolox-ros-deepstream）
@@ -61,7 +67,9 @@
 > 详细教程请进入[yolox-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-ros-deepstream)
 
 > 最终视频检测效果请进入[yolox-ros-deepstream检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson NX yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1W34y1B7YB?spm_id_from=333.999.0.0)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson Nano yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Tq4y1A7km?spm_id_from=333.999.0.0)
 
 #  CDR子项目(五)（resnet10+ros+deepstream `for python` ）----(Jetson Nano `and` X_86) 
@@ -70,7 +78,9 @@
 > 详细教程请进入[resnet10-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/blob/main/resnet10-ros-deepstream/README.md)
 
 > 最终视频检测效果请进入[resnet10-ros-deepstream检测](https://www.bilibili.com/video/BV1Xg411w78P/)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson NX resnet10-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Fr4y1v7AM?spm_id_from=333.999.0.0)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson Nano resnet10-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1p34y1B7Vx?spm_id_from=333.999.0.0)
 
 #  CDR子项目(六)（yolox-deepstream-python）
@@ -80,7 +90,9 @@
 > 详细教程请进入[yolox-deepstream-python](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-deepstream-python)
 
 > 最终视频检测效果请进入[yolox-deepstream-python检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson NX yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1W34y1B7YB?spm_id_from=333.999.0.0)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson Nano yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Tq4y1A7km?spm_id_from=333.999.0.0)
 
 #  CDR子项目(七)（yolox-deepstream-cpp）
@@ -90,7 +102,9 @@
 > 详细教程请进入[yolox-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-deepstream-cpp)
 
 > 最终视频检测效果请进入[yolox-deepstream-cpp检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson NX yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1W34y1B7YB?spm_id_from=333.999.0.0)
+> 
 > 加入目标跟踪器视频检测效果请进入[Jetson Nano yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Tq4y1A7km?spm_id_from=333.999.0.0)
 
 #  [CDR项目常见问题及其解决方案(Common problems and solutions)](https://github.com/guojianyang/cv-detect-robot/wiki/CDR%E9%A1%B9%E7%9B%AE%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(Common-problems-and-solutions))
