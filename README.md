@@ -31,6 +31,8 @@
 >详细教程请进入[yolov5-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/blob/main/yolov5-ros-deepstream)
 
 >最终视频检测效果请进入[yolov5-ros-deepstream检测](https://www.bilibili.com/video/BV1Lo4y1Q79C/)
+>加入目标跟踪器视频检测效果请进入[Jetson NX yolov5-ros-deepstream+目标跟踪](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
+>加入目标跟踪器视频检测效果请进入[Jetson Nano yolov5-ros-deepstream+目标跟踪](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
 #  CDR子项目(二)（yolov5-deepstream-python）
 -  yolov5-deepstream-python 子项目简介
@@ -39,6 +41,9 @@
 > 详细教程请进入[yolov5-deepstream-python](https://github.com/guojianyang/cv-detect-robot/tree/main/yolov5-deepstream-python)
 
 > 最终视频检测效果请进入[yolov5-deepstream-python检测](https://www.bilibili.com/video/BV1Uv411E755/)
+>加入目标跟踪器视频检测效果请进入[Jetson NX yolov5-python-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
+>加入目标跟踪器视频检测效果请进入[Jetson Nano yolov5-python-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
+
 #  CDR子项目(三)（yolov5-deepstream-cpp）
 - yolov5-deepstream-cpp 子项目简介
 > 该项目是将视觉检测算法yolov5与神经网络加速引擎tensorRT结合,利用共享内存技术将检测所得到的数据实时储存到事先定义好的物理内存中（物理地址是唯一的），在同一硬件平台上的任意软件目录中，建立一个读取物理内存的`yolov5_tensor.cpp`文件（里面只包含一个读取内存的代码段），编译后可将指定好的物理内存中的数据读取出来，在读取成功的前提下，可将该代码段插入到任意需要目标检测数据的C++项目中，从而使该C++项目能顺利获取目标检测数据。
@@ -46,6 +51,8 @@
 > 详细教程请进入[yolov5-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/tree/main/yolov5-deepstream-cpp)
 
 > 最终视频检测效果请进入[yolov5-deepstream-cpp检测](https://www.bilibili.com/video/BV1yV411p7Dx/)
+> 加入目标跟踪器视频检测效果请进入[Jetson NX yolov5-cpp-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
+> 加入目标跟踪器视频检测效果请进入[Jetson Nano yolov5-cpp-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
 #  CDR子项目(四)（yolox-ros-deepstream）
 - yolox-ros-deepstream 子项目简介
@@ -54,6 +61,8 @@
 > 详细教程请进入[yolox-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-ros-deepstream)
 
 > 最终视频检测效果请进入[yolox-ros-deepstream检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
+> 加入目标跟踪器视频检测效果请进入[Jetson NX yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1W34y1B7YB?spm_id_from=333.999.0.0)
+> 加入目标跟踪器视频检测效果请进入[Jetson Nano yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Tq4y1A7km?spm_id_from=333.999.0.0)
 
 #  CDR子项目(五)（resnet10+ros+deepstream `for python` ）----(Jetson Nano `and` X_86) 
 > 该项目利用`deepstream`的python接口，基于英伟达针对性优化的`resnet10.caffemodel`模型,可利用英伟达新推出的`(TAO) Toolkit `工具包进行自定义数据集训练及模型优化，并继承CDR项目祖传的ros接口。不仅能在Jetson系列平台使用，通过docker容器技术，也可在Linux-x_86平台(Ubuntu)实现快速部署。经测试，该模型在Jetson Nano上可实现在检测算法和多目标跟踪算法同时加持情况下高达30fps的帧率(检测四种目标)，准确率可达90%以上(接近yolov5)。
@@ -61,6 +70,8 @@
 > 详细教程请进入[resnet10-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/blob/main/resnet10-ros-deepstream/README.md)
 
 > 最终视频检测效果请进入[resnet10-ros-deepstream检测](https://www.bilibili.com/video/BV1Xg411w78P/)
+> 加入目标跟踪器视频检测效果请进入[Jetson NX resnet10-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Fr4y1v7AM?spm_id_from=333.999.0.0)
+> 加入目标跟踪器视频检测效果请进入[Jetson Nano resnet10-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1p34y1B7Vx?spm_id_from=333.999.0.0)
 
 #  CDR子项目(六)（yolox-deepstream-python）
 - yolox-deepstream-python 子项目简介
@@ -69,6 +80,8 @@
 > 详细教程请进入[yolox-deepstream-python](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-deepstream-python)
 
 > 最终视频检测效果请进入[yolox-deepstream-python检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
+> 加入目标跟踪器视频检测效果请进入[Jetson NX yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1W34y1B7YB?spm_id_from=333.999.0.0)
+> 加入目标跟踪器视频检测效果请进入[Jetson Nano yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Tq4y1A7km?spm_id_from=333.999.0.0)
 
 #  CDR子项目(七)（yolox-deepstream-cpp）
 - yolox-deepstream-cpp 子项目简介
@@ -77,6 +90,8 @@
 > 详细教程请进入[yolox-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-deepstream-cpp)
 
 > 最终视频检测效果请进入[yolox-deepstream-cpp检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
+> 加入目标跟踪器视频检测效果请进入[Jetson NX yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1W34y1B7YB?spm_id_from=333.999.0.0)
+> 加入目标跟踪器视频检测效果请进入[Jetson Nano yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Tq4y1A7km?spm_id_from=333.999.0.0)
 
 #  [CDR项目常见问题及其解决方案(Common problems and solutions)](https://github.com/guojianyang/cv-detect-robot/wiki/CDR%E9%A1%B9%E7%9B%AE%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(Common-problems-and-solutions))
 #  [Jetson Nano和 NX在运行CDR项目时注意事项](https://github.com/guojianyang/cv-detect-robot/wiki/Jetson-Nano%E5%92%8C-NX%E5%9C%A8%E8%BF%90%E8%A1%8CCDR%E9%A1%B9%E7%9B%AE%E6%97%B6%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
