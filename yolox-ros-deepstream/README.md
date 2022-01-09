@@ -249,6 +249,9 @@ yolox-ros中的文件内容如下图所示：
 	    cd /opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros
 	    
 	    deepstream-app -c deepstream_app_config.txt
+	    
+	    
+  - 若出现“mmap err:Bad file descriptor”,通过此链接查找原因[常见问题集合](https://github.com/guojianyang/cv-detect-robot/wiki/CDR%E9%A1%B9%E7%9B%AE%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E5%85%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(Common-problems-and-solutions))
 
   - 将yolox-ros-deepstream中的client_ros.py文件复制到/opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/中
 	  > cp -r ~/cv-detect-ros/yolox-ros-deepstream/client_ros.py /opt/nvidia/deepstream/deepstream-5.1/sources/yolox-ros/
