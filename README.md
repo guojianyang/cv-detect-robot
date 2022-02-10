@@ -1,6 +1,6 @@
 ![enter image description here](https://img-blog.csdnimg.cn/7007a6ec9d584018bdf289bd8987c45d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 #   [中文] | [[English]](https://github.com/guojianyang/cv-detect-robot/blob/main/README_EN.md)
-#  CDR(cv-detect-robot)项目介绍🔥🔥🔥（工业级视觉算法Jetson侧端部署）
+#  CDR(cv-detect-robot)项目介绍🔥🔥🔥（工业级视觉算法Jetson侧端优化部署）
 **CDR项目立项宗旨**：高性能视觉检测及其相关算法赋能机器人行业，搭建起技术落地的桥梁。
 > （ **备注1**）:本项目已针对ubuntu-x_86平台和nvidia-jetson平台配置了全套docker镜像，无需配置繁杂软件环境，一键导入，省时又省力，镜像下载请联系CDR项目交流群群主(微信`17370042325`)。
 
