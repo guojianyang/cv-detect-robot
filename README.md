@@ -2,27 +2,31 @@
 #   [中文] | [[English]](https://github.com/guojianyang/cv-detect-robot/blob/main/README_EN.md)
 #  CDR(cv-detect-robot)项目介绍🔥🔥🔥（工业级视觉算法Jetson侧端部署）
 **CDR项目立项宗旨**：高性能视觉检测及其相关算法赋能机器人行业，搭建起技术落地的桥梁。
-> （ **备注(1)**）:已接入本项目的`yolov5-ros-deepstream`和`yolox-ros-deepstream`已做好了ROS系统的适配，待相关软硬件环境搭建好后即可直接调用已定义好的ros话题消息获取目标检测实时数据。
+> （ **备注1**）:本项目已针对ubuntu-x_86平台和nvidia-jetson平台配置了全套docker镜像，无需配置繁杂软件环境，一键导入，省时又省力，镜像下载请联系CDR项目交流群群主(微信`17370042325`)。
 
->   （ **备注(2)**）:后续将接入**百度paddle的ppyolo算法**、**旷世科技的YOLOX算法**和**一系列像素级目标检测及追踪算法**。
+>   （ **备注2**）:本项目后续将通过腾讯优图的ncnn加速库对华为海思3559、瑞芯微3399pro、勘智K210等国产AI芯片进行视觉算法的侧端优化及部署，敬请期待！！！。
 
->   （ **备注(３)**）:随着本人及团队的学习成长，该项目会不定期进行维护和更新，由于能力有限，项目中存在错误和不足之处望各位批评指正或在`issue`中留言。
+>   （ **备注3**）:随着本人及团队的学习成长，该项目会不定期进行维护和更新，由于能力有限，项目中存在错误和不足之处望各位批评指正或在`issue`中留言。
 
->   （ **备注(4)**）:为方便大家学习交流，已建立**CDR(cv-detect-robot)项目**交流微信群，请添加群负责人`小郭`微信号`17370042325`,以方便拉您进群。
+>   （ **备注4**）:为方便大家学习交流，已建立**CDR(cv-detect-robot)项目**交流微信群，请添加群负责人`小郭`微信号`17370042325`,以方便拉您进群。
 ***
 ***
-# CDR~走向实用化之-v3.0版本更新内容如下🔥🔥🔥🔥🔥：
-- 增加子项目（六）和（七），分别为yolox的python接口和cpp接口。
-- 在子项目(五)中，将摄像头检测和视频文件检测集成到一个python程序中，具体操作参考同级文件夹下README.md。
-- 解决子项目(一)(二)(三)(四)中实时摄像头检测屏幕画面全覆盖问题。
-- 解决频繁出现的`mmap err:Bad file descriptor`错误。
-- 对yolov5和yolox检测模型后都级联了DCF目标跟踪器。
-- 对于所有子项目都可进行指定目标类别检测跟踪。
-- 发布了Nano板和NX板在运行CDR项目时需要注意事项的README.md文档。
-- 发布如何生成engine文件的README.md文档。
-- 解决子项目(二)yolov5-deepstream-python中ros节点读取数据一直显示24个恒定目标数据的问题
-
+# CDR~全系标配docker镜像之-v4.0版本更新内容如下🔥🔥🔥🔥🔥：
+- CDR中deepstream框架升级到6.0版本(tensorRT 8.0.1)
+- 所有子项目都适配了deepsort跟踪器(IOU,DCF和deepsort三种跟踪器随意切换)，且所有子项目的目标跟踪ID都可通过rostopic,python脚本和cpp程序获得。
+- 全系标配docker镜像，项目作者为	CDR项目分别配置了基于x_86平台和nvidia-jetson平台的全套镜像环境，并附带项目镜像操作及各子项目测试教程。
+    - [CDR x86 docker镜像使用及测试教程](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-x86-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)
+    - [CDR jetson docker镜像使用及测试教程](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-jetson-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)
+- CDR镜像内具备pt->wts->trt功能(yolov5)和onnx-trt功能(yolox)。
+- CDR镜像内每个子项目都能具备多流检测，具体操作参考如下链接。
+   - [docker镜像CDR项目中多视频流检测方法
+](https://github.com/guojianyang/cv-detect-robot/wiki/docker%E9%95%9C%E5%83%8FCDR%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%A4%9A%E8%A7%86%E9%A2%91%E6%B5%81%E6%A3%80%E6%B5%8B%E6%96%B9%E6%B3%95)
+-  CDR镜像内各子项目同时具备视频文件检测、usb摄像头检测及rtsp实时流检测功能。
+- CDR镜像内已配置yolov5项目源码全套运行环境、yolox项目源码全套运行环境、deepstream全套运行环境及ros-melodic全套运行环境，具体环境配置请查阅如下链接：
+   - [docker镜像CDR项目中已有环境及相应版本介绍](https://github.com/guojianyang/cv-detect-robot/wiki/docker%E9%95%9C%E5%83%8FCDR%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B7%B2%E6%9C%89%E7%8E%AF%E5%A2%83%E5%8F%8A%E7%9B%B8%E5%BA%94%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D)
 ***
+***
+#  ！！！若使用docker镜像，本行以下内容只作了解即可！！！
 ***
 #  CDR子项目(一)（yolov5-ros-deepstream）
 -  yolov5-ros-deepstream 子项目简介
