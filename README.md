@@ -3,6 +3,9 @@
 #   [中文] | [[English]](https://github.com/guojianyang/cv-detect-robot/blob/main/README_EN.md)
 #  CDR(cv-detect-robot)项目介绍🔥🔥🔥（工业级视觉算法Jetson侧端优化部署）
 **CDR项目立项宗旨**：高性能视觉检测及其相关算法赋能机器人行业，搭建起技术落地的桥梁。
+### **项目简介**:
+- 本项目针对x_86和nvidia-jetson平台，利用tensorRT优化，基于deepstream视频流AI推理框架，搭建了yolov5,yolox和resnet等视觉检测算法，并对每种算法配置了deepsort,DCF和IOU跟踪器。检测及跟踪数据利用共享内存的方式传输。可通过rostopic,python脚本和c++程序三种方式读取实时数据。本项目提供了零基础入门配置及调试教程，也提供了基于x_86平台和nvidia平台的docker镜像，可省去配置环境的麻烦，一键导入运行。镜像包含yolov5项目源码全套运行环境，yolox项目源码全套运行环境。deepstream全套运行环境和ros操作系统（melodic）。
+
 > （ **备注1**）:本项目已针对ubuntu-x_86平台和nvidia-jetson平台配置了全套docker镜像，无需配置繁杂软件环境，一键导入，省时又省力，镜像下载请联系CDR项目交流群群主(微信`17370042325`)。
 
 >   （ **备注2**）:本项目后续将通过腾讯优图的ncnn加速库对华为海思3559、瑞芯微3399pro、勘智K210等国产AI芯片进行视觉算法的侧端优化及部署，敬请期待！！！。
