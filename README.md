@@ -1,4 +1,5 @@
-![enter image description here](https://img-blog.csdnimg.cn/7007a6ec9d584018bdf289bd8987c45d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+   ![enter image description here](https://img-blog.csdnimg.cn/7007a6ec9d584018bdf289bd8987c45d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 #   [中文] | [[English]](https://github.com/guojianyang/cv-detect-robot/blob/main/README_EN.md)
 #  CDR(cv-detect-robot)项目介绍🔥🔥🔥（工业级视觉算法Jetson侧端优化部署）
 **CDR项目立项宗旨**：高性能视觉检测及其相关算法赋能机器人行业，搭建起技术落地的桥梁。
@@ -26,13 +27,15 @@
    - [docker镜像CDR项目中已有环境及相应版本介绍](https://github.com/guojianyang/cv-detect-robot/wiki/docker%E9%95%9C%E5%83%8FCDR%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B7%B2%E6%9C%89%E7%8E%AF%E5%A2%83%E5%8F%8A%E7%9B%B8%E5%BA%94%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D)
 ***
 ***
-- **因`CDR x86 docker`镜像和`CDR jetson docker`镜像环境配置和算法调试及其复杂，耗时巨大，对上述两镜像采取收费机制**：
-    -  **[CDR x86 docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-x86-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)--------------------------------------------收费28RMB**
-    -  **[CDR jetson docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-jetson-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)-----------------------------------------收费36RMB**
-    - 购买请联系下方项目作者微信(17370042325):
-		- ![在这里插入图片描述](https://img-blog.csdnimg.cn/98e5578034fe47cab5ef59a10219810c.png)
-
-
+- **`CDR x86 docker`镜像和`CDR jetson docker`镜像环境配置和算法调试及其复杂，耗时巨大，但本着开源共享的精神，项目作者决定供全行业免费使用**：
+    -  [CDR x86 docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-x86-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)(28G左右)下载链接如下(不限速)：
+       -   链接:`http://112.74.111.51:1212/down/Dcyn8UvJ81Lg` 提取码:`Z78Din`
+     
+    -  [CDR jetson docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-jetson-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)(10G左右)下载链接如下(不限速)：
+       - 链接:`http://112.74.111.51:1212/down/tSpLJEbUHvQC` 提取码:`nKTzyp`
+   
+   
+***
 ***
 #  ！！！若使用docker镜像，本行以下内容只作了解即可,若想从零开始配置环境则可参照以下内容！！！
 ***
