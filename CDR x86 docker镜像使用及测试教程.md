@@ -1,7 +1,7 @@
 # 一、CDR-x86-docker镜像使用及测试教程：
   （备注）：有效下载链接请联系微信群主(17370042325)获取.
 ##  1.根据如下链接下载`CDR-v4.0.tar`镜像文件：
-- 链接:`http://112.74.111.51:1212/down/KSYLT4SBG2tO` 提取码:`123456`,如下图：
+- 链接:`http://112.74.111.51:1212/down/Dcyn8UvJ81Lg` 提取码:`Z78Din`,如下图：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d5849d11d71946a3b5796e29a1ac36d8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 ##  2.将下载的`CDR-v4.0.tar`镜像文件导入docker：
 （备注）：在镜像导入docker前,需在`ubuntu_x86`平台安装`docker`和`nvidia-docker2`，可参考如下链接：
