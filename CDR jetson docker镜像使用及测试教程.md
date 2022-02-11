@@ -1,7 +1,7 @@
 # 一、CDR-jetson-docker镜像使用及测试教程：
   （备注）：有效下载链接请联系微信群主(17370042325)获取.
 ##  1.根据如下链接下载`CDR-jetson-v4.18.tar`镜像文件：
-- 链接:`http://112.74.111.51:1212/down/KSYLT4SBG2tO` 提取码:`123456`,如下图：
+- 链接:`http://112.74.111.51:1212/down/tSpLJEbUHvQC` 提取码:`nKTzyp`,如下图：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d5849d11d71946a3b5796e29a1ac36d8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 ##  2.将下载的`CDR-jetson-v4.18.tar`镜像文件导入docker：
 - 在镜像文件所在目录下，右键打开终端命令行
