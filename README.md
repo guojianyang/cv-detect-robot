@@ -30,7 +30,7 @@
    - [docker镜像CDR项目中已有环境及相应版本介绍](https://github.com/guojianyang/cv-detect-robot/wiki/docker%E9%95%9C%E5%83%8FCDR%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B7%B2%E6%9C%89%E7%8E%AF%E5%A2%83%E5%8F%8A%E7%9B%B8%E5%BA%94%E7%89%88%E6%9C%AC%E4%BB%8B%E7%BB%8D)
 ***
 ***
-- **`CDR x86 docker`镜像和`CDR jetson docker`镜像环境配置和算法调试及其复杂，耗时巨大，但本着开源共享的精神，项目作者决定供全行业免费使用**：
+- **`CDR x86 docker`镜像和`CDR jetson docker`镜像环境配置和算法调试复杂，耗时巨大，但本着开源共享的精神，项目作者决定供全行业免费使用**：
     -  [CDR x86 docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-x86-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)(28G左右)下载链接如下(不限速)：
        -   链接:`http://112.74.111.51:1212/down/Dcyn8UvJ81Lg` 提取码:`Z78Din`
      
