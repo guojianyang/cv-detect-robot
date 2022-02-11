@@ -27,8 +27,8 @@
 ***
 ***
 - **因`CDR x86 docker`镜像和`CDR jetson docker`镜像环境配置和算法调试及其复杂，耗时巨大，对上述两镜像采取收费机制**：
-    -  **[CDR x86 docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-x86-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)--------------------------------------------收费45RMB**
-    -  **[CDR jetson docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-jetson-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)-----------------------------------------收费55RMB**
+    -  **[CDR x86 docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-x86-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)--------------------------------------------收费28RMB**
+    -  **[CDR jetson docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-jetson-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)-----------------------------------------收费36RMB**
 
 ***
 #  ！！！若使用docker镜像，本行以下内容只作了解即可,若想从零开始配置环境则可参照以下内容！！！
