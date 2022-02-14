@@ -1,4 +1,3 @@
-
    ![enter image description here](https://img-blog.csdnimg.cn/7007a6ec9d584018bdf289bd8987c45d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 #   [中文] | [[English]](https://github.com/guojianyang/cv-detect-robot/blob/main/README_EN.md)
 #  CDR(cv-detect-robot)项目介绍🔥🔥🔥（工业级视觉算法Jetson侧端优化部署）
@@ -33,9 +32,13 @@
 - **`CDR x86 docker`镜像和`CDR jetson docker`镜像环境配置和算法调试极其复杂，耗时巨大，但本着开源共享的精神，项目作者决定供全行业免费使用**：
     -  [CDR x86 docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-x86-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)(28G左右)下载链接如下(不限速)：
        -   链接:`http://112.74.111.51:1212/down/Dcyn8UvJ81Lg` 提取码:`Z78Din`
-     
+      - [CDR x86 docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-x86-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)dockerhub下载(14.54 GB)命令：
+        > `docker pull gjy123456/cv-detect-robot:CDR-x86-v4.02`
+     ***
     -  [CDR jetson docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-jetson-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)(10G左右)下载链接如下(不限速)：
        - 链接:`http://112.74.111.51:1212/down/tSpLJEbUHvQC` 提取码:`nKTzyp`
+  -  [CDR jetson docker镜像](https://github.com/guojianyang/cv-detect-robot/wiki/CDR-jetson-docker%E9%95%9C%E5%83%8F%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B)(4.58G左右)dockerhub下载命令：
+      >`docker pull gjy123456/cv-detect-robot:CDR-jetson-v4.18`
    
    
 ***
