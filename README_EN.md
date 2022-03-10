@@ -45,7 +45,7 @@
    
 ***
 ***
-#  ！！！若使用docker镜像，本行以下内容只作了解即可,若想从零开始配置环境则可参照以下内容！！！
+# ! ! ! If you use docker image, the following content in this line is only for understanding. If you want to configure the environment from scratch, you can refer to the following content! ！！！
 ***
 #  CDR子项目(一)（yolov5-ros-deepstream）
 -  yolov5-ros-deepstream 子项目简介
