@@ -1,10 +1,4 @@
-translate for CDR
-17/100
-保存草稿
-发布文章
-weixin_46438576
-未选择任何文件
-   ![enter image description here](https://img-blog.csdnimg.cn/7007a6ec9d584018bdf289bd8987c45d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
+![enter image description here](https://img-blog.csdnimg.cn/7007a6ec9d584018bdf289bd8987c45d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 #   [English] | [[中文]](https://github.com/guojianyang/cv-detect-robot)
 #  CDR(cv-detect-robot)Project Introduction🔥🔥🔥（Jetson side-end optimized deployment of industrial-grade vision algorithms）
 **CDR Project purpose**：High-performance visual inspection and its related algorithms empower the robotics industry and build a bridge for technology implementation。
