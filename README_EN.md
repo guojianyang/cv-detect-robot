@@ -59,17 +59,17 @@
 >
 >Add the target tracker video detection effect, please enter[Jetson Nano yolov5-ros-deepstream+Target Tracking](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
-#  CDR子项目(二)（yolov5-deepstream-python）
--  yolov5-deepstream-python 子项目简介
-> 该项目是将视觉检测算法yolov5与神经网络加速引擎tensorRT结合,利用共享内存技术将检测所得到的数据实时储存到事先定义好的物理内存中（物理地址是唯一的），在同一硬件平台上的任意软件目录中，建立一个读取物理内存的`client.py`脚本文件（里面只包含一个读取内存的代码段），将指定好的物理内存中的数据读取出来，在读取成功的前提下，可将该代码段插入到任意需要目标检测数据的python项目中，从而使该python项目能顺利获取目标检测数据。
+# CDR sub-project（2）（yolov5-deepstream-python）
+-  Introduction to the yolov5-deepstream-python subproject
+> This project combines the visual detection algorithm yolov5 with the neural network acceleration engine tensorRT, and uses the shared memory technology to store the data obtained from the detection in the pre-defined physical memory in real time (the physical address is unique). In any software directory, create a `client.py` script file for reading physical memory (it only contains a code segment for reading memory), and read the data in the specified physical memory. Under the premise, the code segment can be inserted into any python project that needs target detection data, so that the python project can successfully obtain the target detection data。
 
-> 详细教程请进入[yolov5-deepstream-python](https://github.com/guojianyang/cv-detect-robot/tree/main/yolov5-deepstream-python)
+> Please enter the detailed tutorial[yolov5-deepstream-python](https://github.com/guojianyang/cv-detect-robot/tree/main/yolov5-deepstream-python)
 
-> 最终视频检测效果请进入[yolov5-deepstream-python检测](https://www.bilibili.com/video/BV1Uv411E755/)
+> Please enter the final video detection effect[yolov5-deepstream-python](https://www.bilibili.com/video/BV1Uv411E755/)
 > 
->加入目标跟踪器视频检测效果请进入[Jetson NX yolov5-python-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
+>Add the target tracker video detection effect, please enter[Jetson NX yolov5-python-deepstream+target tracker](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
 >
->加入目标跟踪器视频检测效果请进入[Jetson Nano yolov5-python-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
+>Add the target tracker video detection effect, please enter[Jetson Nano yolov5-python-deepstream+target tracker](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
 #  CDR子项目(三)（yolov5-deepstream-cpp）
 - yolov5-deepstream-cpp 子项目简介
@@ -135,3 +135,4 @@
 #  [wts文件生成engine文件的方法](https://github.com/guojianyang/cv-detect-robot/wiki/wts%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90engine%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95)
 #  [对多类目标中指定目标类别进行识别与跟踪](https://github.com/guojianyang/cv-detect-robot/wiki/%E5%AF%B9%E5%A4%9A%E7%B1%BB%E7%9B%AE%E6%A0%87%E4%B8%AD%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A0%87%E7%B1%BB%E5%88%AB%E8%BF%9B%E8%A1%8C%E8%AF%86%E5%88%AB%E4%B8%8E%E8%B7%9F%E8%B8%AA)
 
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker
