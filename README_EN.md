@@ -71,29 +71,29 @@
 >
 >Add the target tracker video detection effect, please enter[Jetson Nano yolov5-python-deepstream+target tracker](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
-#  CDR子项目(三)（yolov5-deepstream-cpp）
-- yolov5-deepstream-cpp 子项目简介
-> 该项目是将视觉检测算法yolov5与神经网络加速引擎tensorRT结合,利用共享内存技术将检测所得到的数据实时储存到事先定义好的物理内存中（物理地址是唯一的），在同一硬件平台上的任意软件目录中，建立一个读取物理内存的`yolov5_tensor.cpp`文件（里面只包含一个读取内存的代码段），编译后可将指定好的物理内存中的数据读取出来，在读取成功的前提下，可将该代码段插入到任意需要目标检测数据的C++项目中，从而使该C++项目能顺利获取目标检测数据。
+#  CDR sub-project（3）（yolov5-deepstream-cpp）
+- Introduction to the yolov5-deepstream-cpp subproject
+> This project combines the visual detection algorithm yolov5 with the neural network acceleration engine tensorRT, and uses the shared memory technology to store the data obtained from the detection in the pre-defined physical memory in real time (the physical address is unique). In any software directory, create a `yolov5_tensor.cpp` file for reading physical memory (it only contains a code segment for reading memory). After compiling, the data in the specified physical memory can be read out. Under the premise of success, the code segment can be inserted into any C++ project that needs target detection data, so that the C++ project can successfully obtain target detection data.
 
-> 详细教程请进入[yolov5-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/tree/main/yolov5-deepstream-cpp)
+> Please enter the detailed tutorial[yolov5-deepstream-cpp](https://github.com/guojianyang/cv-detect-robot/tree/main/yolov5-deepstream-cpp)
 
-> 最终视频检测效果请进入[yolov5-deepstream-cpp检测](https://www.bilibili.com/video/BV1yV411p7Dx/)
+> Please enter the final video detection effect[yolov5-deepstream-cpp-detection](https://www.bilibili.com/video/BV1yV411p7Dx/)
 > 
-> 加入目标跟踪器视频检测效果请进入[Jetson NX yolov5-cpp-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
+> Add the target tracker video detection effect, please enter[Jetson NX yolov5-cpp-deepstream+target tracker](https://www.bilibili.com/video/BV1u34y1673W?spm_id_from=333.999.0.0)
 > 
-> 加入目标跟踪器视频检测效果请进入[Jetson Nano yolov5-cpp-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
+> Add the target tracker video detection effect, please enter[Jetson Nano yolov5-cpp-deepstream+target tracker](https://www.bilibili.com/video/BV1pS4y1Z7cX?spm_id_from=333.999.0.0)
 
-#  CDR子项目(四)（yolox-ros-deepstream）
-- yolox-ros-deepstream 子项目简介
-> 该项目是将yolox视觉检测算法与神经网络加速引擎tensorRT结合，本子项目采另一种引擎文件生成方法，通过onnx转到engine，此方法更具灵活性，也越来越稳定，符合行业主流发展趋势，在英伟达的deepstream框架下运行，结合ros通信机制，将检测数据实时通过ros topic 发布出去。以供基于ROS机器人操作系统的开发人员及相关科研人员使用。
+#  CDR sub-project（4）（yolox-ros-deepstream）
+- Introduction to the yolox-ros-deepstream subproject
+> This project combines the yolox visual detection algorithm with the neural network acceleration engine tensorRT. This sub-project adopts another engine file generation method, which is transferred to the engine through onnx. This method is more flexible and more stable, which is in line with the mainstream development of the industry. Trend, runs under NVIDIA's deepstream framework, combined with ros communication mechanism, and publishes detection data in real time through ros topic. For developers and related researchers based on ROS robot operating system.
 
-> 详细教程请进入[yolox-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-ros-deepstream)
+> Please enter the detailed tutorial[yolox-ros-deepstream](https://github.com/guojianyang/cv-detect-robot/tree/main/yolox-ros-deepstream)
 
-> 最终视频检测效果请进入[yolox-ros-deepstream检测](https://www.bilibili.com/video/BV1k34y1o7Ck/)
+> Please enter the final video detection effect[yolox-ros-deepstream-detection](https://www.bilibili.com/video/BV1k34y1o7Ck/)
 > 
-> 加入目标跟踪器视频检测效果请进入[Jetson NX yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1W34y1B7YB?spm_id_from=333.999.0.0)
+> Add the target tracker video detection effect, please enter[Jetson NX yolox-ros-deepstream+target tracker]](https://www.bilibili.com/video/BV1W34y1B7YB?spm_id_from=333.999.0.0)
 > 
-> 加入目标跟踪器视频检测效果请进入[Jetson Nano yolox-ros-deepstream+目标跟踪器](https://www.bilibili.com/video/BV1Tq4y1A7km?spm_id_from=333.999.0.0)
+> Add the target tracker video detection effect, please enter[Jetson Nano yolox-ros-deepstream+target tracker]](https://www.bilibili.com/video/BV1Tq4y1A7km?spm_id_from=333.999.0.0)
 
 #  CDR子项目(五)（resnet10+ros+deepstream `for python` ）----(Jetson Nano `and` X_86) 
 > 该项目利用`deepstream`的python接口，基于英伟达针对性优化的`resnet10.caffemodel`模型,可利用英伟达新推出的`(TAO) Toolkit `工具包进行自定义数据集训练及模型优化，并继承CDR项目祖传的ros接口。不仅能在Jetson系列平台使用，通过docker容器技术，也可在Linux-x_86平台(Ubuntu)实现快速部署。经测试，该模型在Jetson Nano上可实现在检测算法和多目标跟踪算法同时加持情况下高达30fps的帧率(检测四种目标)，准确率可达90%以上(接近yolov5)。
