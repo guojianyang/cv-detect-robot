@@ -1,5 +1,5 @@
 # 一、CDR-jetson-docker镜像使用及测试教程：
-  （备注）：有效下载链接请联系微信群主(17370042325)获取.
+  （备注）：有效下载链接请联系微信群主(17370042325)获取,建议jetson宿主机环境为jetpack 4.6。
 ##  1.根据如下链接下载`CDR-jetson-v4.18.tar`镜像文件：
 - 链接:`http://112.74.111.51:1212/down/tSpLJEbUHvQC` 提取码:`nKTzyp`,如下图：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d5849d11d71946a3b5796e29a1ac36d8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
@@ -47,6 +47,10 @@
  - 打开`vscode`，并在扩展栏里面安装`docker`和`remote-container`插件，安装成功后重启vscode,进入docker图标，可在容器(containers)目录栏查看到步骤2中建立的容器`cv-detect-robot:v4.18`，光标移至该处并点击右键进入`Attach Visual Studio Code`后(会自动新建一窗口)，便可远程连接该容器(container)。 
 
 ##  4.在vscode中测试deepstream-test7相关功能
+（注意）：deepstream_test7文件夹在以下路径：
+
+> ~/opt/nvidia/deepstream/sources/deepstream_python_apps/deepstream_test7/
+
 - 运行如下命令，测试视频文件检测功能：
   > python3 deepstream-test_7_file.py  file:///opt/nvidia/deepstream/deepstream-6.0/samples/streams/sample_qHD.mp4
   
@@ -67,6 +71,10 @@
    
    
 ##  5.在vscode中测试deepstream-yolov5相关功能
+（注意）：deepstream-yolov5文件夹在以下路径：
+
+> ~/opt/nvidia/deepstream/sources/deepstream_python_apps/deepstream-yolov5/
+
 - 运行如下命令，测试视频文件检测功能：
   > python3 deepstream_yolov5_file.py file:///opt/nvidia/deepstream/deepstream-6.0/samples/streams/sample_qHD.h
   
@@ -86,6 +94,10 @@
    
    
 ##  6.在vscode中测试deepstream-yolox需相关功能
+（注意）：deepstream-yolox文件夹在以下路径：
+
+> ~/opt/nvidia/deepstream/sources/deepstream_python_apps/deepstream-yolox/
+
 - 运行如下命令，测试视频文件检测功能：
   > python3 deepstream_yolox_file.py file:///opt/nvidia/deepstream/deepstream-6.0/samples/streams/sample_qHD.h264
 
