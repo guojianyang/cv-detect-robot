@@ -1,5 +1,5 @@
 # 一、CDR-x86-docker镜像使用及测试教程：
-  （备注）：有效下载链接请联系微信群主(17370042325)获取.
+  （备注）：有效下载链接请联系微信群主(17370042325)获取，x_86版本的镜像需配合安培(Ampere)架构NVIDIA显卡使用(30系列显卡均属安培架构),需先在x_86宿主机上安装显卡驱动。
 ##  1.根据如下链接下载`CDR-v4.0.tar`镜像文件：
 - 链接:`http://112.74.111.51:1212/down/Dcyn8UvJ81Lg` 提取码:`Z78Din`,如下图：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d5849d11d71946a3b5796e29a1ac36d8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
@@ -19,15 +19,25 @@
   
    - 指令解释： 
       > --net=host   -----------------------------生成的容器与宿主机使用同一网络
+
       > --device=/dev/video0  ---------------`video0`表示摄像头ID，指将宿主机摄像头接入容器(需在宿主机上插上USB摄像头)
+
       > QT_X11_NO_MITSHM=1  ------------容器图形化界面设置
+
       > --gpus '"'device=0'"'  -----------------指定容器所使用的gpu
+
       > --name="guo02	"  ----------------------自定义容器名称`guo18`
+
       > --privileged=true  ----------------------使容器内的root拥有真正的root权限
+
       > -v /tmp/.X11-unix:/tmp/.X11-unix --------------- 容器图形化界面设置
+
       >  -e DISPLAY=$DISPLAY  ---------------容器图形化界面设置
+
       >  -w /opt/nvidia/deepstream/deepstream-6.0 ---------- 刚进入容器时所在的目录      
+
       >  cv-detect-robot:v4.02 ----------------`cv-detect-robot`为镜像仓库名称，`v4.02`为镜像标签(tag)
+
       >  /bin/bash --------------------------------启动容器后启动bash(docker后台必须运行一个进程，否则容器就会退出)
       
     - 运行以上指令后可从终端进入容器。如下图所示：
@@ -42,6 +52,10 @@
  - 打开`vscode`，并在扩展栏里面安装`docker`和`remote-container`插件，安装成功后重启vscode,进入docker图标，可在容器(containers)目录栏查看到步骤2中建立的容器`cv-detect-robot:v4.02`，光标移至该处并点击右键进入`Attach Visual Studio Code`后(会自动新建一窗口)，便可远程连接该容器(container)。 
 
 ##  4.在vscode中测试deepstream-test7相关功能
+（注意）：deepstream_test7文件夹在以下路径：
+
+> ~/opt/nvidia/deepstream/sources/deepstream_python_apps/deepstream_test7/
+
 - 运行如下命令，测试视频文件检测功能：
   > python3 deepstream-test_7_file.py /opt/nvidia/deepstream/deepstream-6.0/samples/streams/sample_qHD.mp4
   
@@ -62,6 +76,10 @@
    
    
 ##  5.在vscode中测试deepstream-yolov5相关功能
+（注意）：deepstream-yolo5文件夹在以下路径：
+
+> ~/opt/nvidia/deepstream/sources/deepstream_python_apps/deepstream-yolov5/
+
 - 运行如下命令，测试视频文件检测功能：
   > python3 deepstream_yolov5_file.py file:///opt/nvidia/deepstream/deepstream-6.0/samples/streams/sample_qHD.h264
   
@@ -81,6 +99,10 @@
    
    
 ##  6.在vscode中测试deepstream-yolox需相关功能
+（注意）：deepstream-yolox文件夹在以下路径：
+
+> ~/opt/nvidia/deepstream/sources/deepstream_python_apps/deepstream-yolox/
+
 - 运行如下命令，测试视频文件检测功能：
   > python3 deepstream_yolox_file.py file:///opt/nvidia/deepstream/deepstream-6.0/samples/streams/sample_qHD.h264
 
