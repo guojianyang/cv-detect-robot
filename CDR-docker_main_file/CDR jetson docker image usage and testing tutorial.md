@@ -3,40 +3,40 @@
 ##  1.Download the `CDR-jetson-v4.18.tar` image file according to the following link：
 - Link: `http://112.74.111.51:1212/down/tSpLJEbUHvQC` Extraction code: `nKTzyp`, as shown below：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d5849d11d71946a3b5796e29a1ac36d8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
-##  2.将下载的`CDR-jetson-v4.18.tar`镜像文件导入docker：
-- 在镜像文件所在目录下，右键打开终端命令行
-- 运行docker镜像加载命令(大致需5分钟左右加载完成)：
+##  2.Import the downloaded `CDR-jetson-v4.18.tar` image file into docker：
+- In the directory where the image file is located, right-click to open the terminal command line
+- Run the docker image load command (it takes about 5 minutes to load)：
   > docker load -i  CDR-jetson-v4.18.tar  
- 	- 加载完成后可通过在终端输入`docker images`查看已加载的镜像，如下图：
+ 	- After the loading is complete, you can view the loaded image by entering `docker images` in the terminal, as shown below：
  	![在这里插入图片描述](https://img-blog.csdnimg.cn/9e2ac0fd661b4d99b82e886843cd84f1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
-- 在终端输入以下命令创建CDR-jetson容器:
-  - 命令如下： 
+- Enter the following command in the terminal to create the CDR-jetson container:
+  - The command is as follows： 
   > sudo docker run -it --net=host --device=/dev/video0 -e QT_X11_NO_MITSHM=1 --gpus '"'device=0'"' --name="guo18" --privileged=true -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -w /opt/nvidia/deepstream/deepstream-6.0 cv-detect-robot:v4.18 /bin/bash
   
-   - 指令解释： 
-      > --net=host   -----------------------------生成的容器与宿主机使用同一网络
+   - Instruction explanation： 
+      > --net=host   -----------------------------The generated container uses the same network as the host
       
-      > --device=/dev/video0  ---------------`video0`表示摄像头ID，指将宿主机摄像头接入容器(需在宿主机上插上USB摄像头)
+      > --device=/dev/video0  ---------------`video0` indicates the camera ID, which means to connect the host camera to the container (the USB camera needs to be plugged into the host)
       
-      > QT_X11_NO_MITSHM=1  ------------容器图形化界面设置
+      > QT_X11_NO_MITSHM=1  ------------Container GUI Settings
       
-      > --gpus '"'device=0'"'  -----------------指定容器所使用的gpu
+      > --gpus '"'device=0'"'  -----------------Specifies the gpu used by the container
       
-      > --name="guo18"  ----------------------自定义容器名称`guo18`
+      > --name="guo18"  ----------------------Custom container name `guo18`
       
-      > --privileged=true  ----------------------使容器内的root拥有真正的root权限
+      > --privileged=true  ----------------------Make root inside the container have real root privileges
       
-      > -v /tmp/.X11-unix:/tmp/.X11-unix --------------- 容器图形化界面设置
+      > -v /tmp/.X11-unix:/tmp/.X11-unix --------------- Container GUI Settings
       
-      >  -e DISPLAY=$DISPLAY  ---------------容器图形化界面设置
+      >  -e DISPLAY=$DISPLAY  ---------------Container GUI Settings
       
-      >  -w /opt/nvidia/deepstream/deepstream-6.0 ---------- 刚进入容器时所在的目录   
+      >  -w /opt/nvidia/deepstream/deepstream-6.0 ---------- The directory you were in when you first entered the container  
          
-      >  cv-detect-robot:v4.18 ----------------`cv-detect-robot`为镜像仓库名称，`v4.18`为镜像标签(tag)
+      >  cv-detect-robot:v4.18 ----------------`cv-detect-robot` is the name of the mirror warehouse, `v4.18` is the mirror tag (tag)
       
-      >  /bin/bash --------------------------------启动容器后启动bash(docker后台必须运行一个进程，否则容器就会退出)
+      >  /bin/bash --------------------------------Start bash after starting the container (a process must be running in the docker background, otherwise the container will exit)
       
-    - 运行以上指令后可从终端进入容器,如下图所示：
+    - After running the above command, you can enter the container from the terminal, as shown in the following figure：
 ![终端](https://img-blog.csdnimg.cn/4d2b1897bbc64643a608b96a28e642a4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 ## 3.安装arm64版本的vscode(基于CDR的二次开发及子项目测试均可在vscode中进行)
 - 在vscode[官方网站](https://code.visualstudio.com/#alt-downloads)下载arm64版本
