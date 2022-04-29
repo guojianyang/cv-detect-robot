@@ -38,13 +38,13 @@
       
     - After running the above command, you can enter the container from the terminal, as shown in the following figure：
 ![终端](https://img-blog.csdnimg.cn/4d2b1897bbc64643a608b96a28e642a4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
-## 3.安装arm64版本的vscode(基于CDR的二次开发及子项目测试均可在vscode中进行)
-- 在vscode[官方网站](https://code.visualstudio.com/#alt-downloads)下载arm64版本
-- 通过以下命令安装vscode(在安装包所在目录下打开终端)：
+## 3.Install the arm64 version of vscode (CDR-based secondary development and sub-project testing can be performed in vscode)
+- Download the arm64 version at vscode [official website](https://code.visualstudio.com/#alt-downloads)
+- Install vscode with the following command (open a terminal in the directory where the installation package is located):
   > sudo dpkg -i code_1.63.2-1639561157_arm64.deb
   
-  安装完成后，在应用程序中可看到`vscode`图标
- - 打开`vscode`，并在扩展栏里面安装`docker`和`remote-container`插件，安装成功后重启vscode,进入docker图标，可在容器(containers)目录栏查看到步骤2中建立的容器`cv-detect-robot:v4.18`，光标移至该处并点击右键进入`Attach Visual Studio Code`后(会自动新建一窗口)，便可远程连接该容器(container)。 
+  After installation, you will see the `vscode` icon in the application
+ - Open `vscode`, and install the `docker` and `remote-container` plugins in the extension bar. After the installation is successful, restart vscode, enter the docker icon, and you can view the container `cv created in step 2 in the container (containers) directory bar -detect-robot:v4.18`, move the cursor there and right-click to enter `Attach Visual Studio Code` (a new window will be created automatically), you can connect to the container remotely. 
 
 ##  4.在vscode中测试deepstream-test7相关功能
 （注意）：deepstream_test7文件夹在以下路径：
