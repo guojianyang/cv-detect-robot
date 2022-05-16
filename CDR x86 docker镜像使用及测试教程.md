@@ -1,5 +1,5 @@
 # 一、CDR-x86-docker镜像使用及测试教程：
-  （备注）：有效下载链接请联系微信群主(17370042325)获取，x_86版本的镜像需配合安培(Ampere)架构NVIDIA显卡使用(30系列显卡均属安培架构),需先在x_86宿主机上安装显卡驱动。
+  （备注）：有效下载链接请联系微信群主(17370042325)获取，x_86版本的镜像需配合安培(Ampere)架构NVIDIA显卡使用(30系列显卡均属安培架构),目前已测试台式机3060显卡可正常运行，其他30系列请大家自行测试。需先在x_86宿主机上安装显卡驱动。
 ##  1.根据如下链接下载`CDR-v4.0.tar`镜像文件：
 - 链接:`http://112.74.111.51:1212/down/Dcyn8UvJ81Lg` 提取码:`Z78Din`,如下图：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d5849d11d71946a3b5796e29a1ac36d8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
