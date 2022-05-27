@@ -93,26 +93,25 @@
    When one of the three detection modes is running, the detection data will be dynamically written into the memory pointed to by `internal_memory.txt`, and the real-time detection data will be obtained by directly reading the dynamic data of the memory through the cpp program, compiling and running` The `testv5.cpp` program under the cpp_io` folder.
    
    
-##  6.在vscode中测试deepstream-yolox需相关功能
-（注意）：deepstream-yolox文件夹在以下路径：
+##  6.Testing deepstream-yolox in vscode requires related functions
+（attention）：The deepstream-yolox folder is at the following path:
 
 > ~/opt/nvidia/deepstream/sources/deepstream_python_apps/deepstream-yolox/
 
-- 运行如下命令，测试视频文件检测功能：
+- Run the following command to test the video file detection function:
   > python3 deepstream_yolox_file.py file:///opt/nvidia/deepstream/deepstream-6.0/samples/streams/sample_qHD.h264
 
-- 运行如下命令，测试usb摄像头实时检测功能：
+- Run the following command to test the real-time detection function of the usb camera:
   >  python3 deepstream_yolox_cam.py /dev/video0
  
- - 运行如下命令，测试rtsp流实时检测功能：
+ - Run the following command to test the real-time detection function of rtsp stream:
    > python3 deepstream_yolox_rtsp.py rtsp://admin:ak123456@192.168.0.123:554/ch1/main/av_stream
 
-- 以上三种检测模式都配置了跟踪器(默认为`deepsort`跟踪器)，检测框右上角显示跟踪ID号， 可通过共享内存(internal_memory.txt)方式获得跟踪ID及跟踪目标的像素坐标.读取共享内存内部动态数据方式有三种：rostopic形式读取、python 接口读取，c++接口读取，下面对三种读取方式进行介绍。
-   - rostopic 读取方式： 
-   在三种检测模式其中一种运行的情况下，检测数据会动态写入`internal_memory.txt`所指向的内存中，首先新建一终端运行`roscore`，再新建终端运行`client_ros.py`(完成内存数据读取和数据topic发布功能)，最后新建一终端运`rostopic echo /BoundingBoxes_tensor`实时查看话题(topic)内容。
-   - python接口读取:
-   在三种检测模式其中一种运行的情况下，检测数据会动态写入`internal_memory.txt`所指向的内存中，通过python直接循环读取内存动态数据的方式获取实时检测数据，运行`client.py`即可实现。
-   - c++接口读取方式:
-   在三种检测模式其中一种运行的情况下，检测数据会动态写入`internal_memory.txt`所指向的内存中，通过cpp程序直接循环读取内存动态数据的方式获取实时检测数据，编译运行`cpp_io`文件夹下的`yolox.cpp`程序。
-
+- The above three detection modes are all configured with a tracker (the default is `deepsort` tracker), and the tracking ID number is displayed in the upper right corner of the detection frame. The tracking ID and the pixel coordinates of the tracking target can be obtained through the shared memory (internal_memory.txt). Read There are three ways to access dynamic data in shared memory: rostopic reading, python interface reading, and c++ interface reading. The three reading methods are described below.
+   - rostopic read method： 
+   When one of the three detection modes is running, the detection data will be dynamically written to the memory pointed to by `internal_memory.txt`. First, create a new terminal to run `roscore`, and then create a new terminal to run `client_ros.py` (complete Memory data reading and data topic publishing functions), and finally create a new terminal and run `rostopic echo /BoundingBoxes_tensor` to view the topic content in real time.
+   -python interface read:
+  When one of the three detection modes is running, the detection data will be dynamically written into the memory pointed to by `internal_memory.txt`, and the real-time detection data will be obtained by directly reading the dynamic data of the memory through python, and run `client. py` can do it.
+   - C++ interface reading method:
+   When one of the three detection modes is running, the detection data will be dynamically written into the memory pointed to by `internal_memory.txt`, and the real-time detection data will be obtained by directly cyclically reading the dynamic data of the memory through the cpp program, compile and run` The `yolox.cpp` program under the cpp_io` folder.
  
