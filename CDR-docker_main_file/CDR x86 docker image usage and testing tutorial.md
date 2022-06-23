@@ -1,46 +1,46 @@
-# 一、CDR-x86-docker镜像使用及测试教程：
-  （备注）：有效下载链接请联系微信群主(17370042325)获取，x_86版本的镜像需配合安培(Ampere)架构NVIDIA显卡使用(30系列显卡均属安培架构),需先在x_86宿主机上安装显卡驱动。
-##  1.根据如下链接下载`CDR-v4.0.tar`镜像文件：
-- 链接:`http://112.74.111.51:1212/down/Dcyn8UvJ81Lg` 提取码:`Z78Din`,如下图：
+# 一、CDR-x86-docker image usage and testing tutorial:
+  (Remarks): Please contact the WeChat group owner (17370042325) for valid download links. The image of the x_86 version needs to be used with the Ampere architecture NVIDIA graphics card (30 series graphics cards belong to the Ampere architecture), and the graphics card needs to be installed on the x_86 host first. drive.
+##  1.Download the `CDR-v4.0.tar` image file according to the following link:
+- Link: `http://112.74.111.51:1212/down/Dcyn8UvJ81Lg` Extraction code: `Z78Din`, as shown below:
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/d5849d11d71946a3b5796e29a1ac36d8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
-##  2.将下载的`CDR-v4.0.tar`镜像文件导入docker：
-（备注）：在镜像导入docker前,需在`ubuntu_x86`平台安装`docker`和`nvidia-docker2`，可参考如下链接：
+##  2.Import the downloaded `CDR-v4.0.tar` image file into docker:
+(Note): Before importing the image into docker, you need to install `docker` and `nvidia-docker2` on the `ubuntu_x86` platform, please refer to the following link:
       	[ubuntu安装docker](https://docs.docker.com/engine/install/ubuntu/)
 	    [ubuntu安装nvidia-docker2](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#nvidia-drivers)
-- 在镜像文件所在目录下，右键打开终端命令行
-- 运行docker镜像加载命令(大致需5分钟左右加载完成)：
+- In the directory where the image file is located, right-click to open the terminal command line
+- Run the docker image load command (it takes about 5 minutes to load):
   > docker load -i  CDR-v4.0.tar  
- 	- 加载完成后可通过在终端输入`docker images`查看已加载的镜像，如下图：
+ 	- After the loading is complete, you can view the loaded image by entering `docker images` in the terminal, as shown below:
  	![在这里插入图片描述](https://img-blog.csdnimg.cn/3ecb7ff428574a148c3139100a476feb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 
-- 在终端输入以下命令创建CDR-x86容器:
-  - 命令如下： 
+- Create the CDR-x86 container by entering the following command in the terminal:
+  - The command is as follows: 
   > sudo docker run -it --net=host --device=/dev/video0 -e QT_X11_NO_MITSHM=1 --gpus '"'device=0'"' --name="guo02" --privileged=true -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -w /opt/nvidia/deepstream/deepstream-6.0 cv-detect-robot:v4.02 /bin/bash
   
-   - 指令解释： 
-      > --net=host   -----------------------------生成的容器与宿主机使用同一网络
+   - Instruction explanation: 
+      > --net=host   -----------------------------The generated container uses the same network as the host
 
-      > --device=/dev/video0  ---------------`video0`表示摄像头ID，指将宿主机摄像头接入容器(需在宿主机上插上USB摄像头)
+      > --device=/dev/video0  ---------------`video0` indicates the camera ID, which means to connect the host camera to the container (the USB camera needs to be plugged into the host)
 
-      > QT_X11_NO_MITSHM=1  ------------容器图形化界面设置
+      > QT_X11_NO_MITSHM=1  ------------Container GUI Settings
 
-      > --gpus '"'device=0'"'  -----------------指定容器所使用的gpu
+      > --gpus '"'device=0'"'  -----------------Specifies the gpu used by the container
 
-      > --name="guo02	"  ----------------------自定义容器名称`guo18`
+      > --name="guo02	"  ----------------------Custom container name `guo18`
 
-      > --privileged=true  ----------------------使容器内的root拥有真正的root权限
+      > --privileged=true  ----------------------Make root inside the container have real root privileges
 
-      > -v /tmp/.X11-unix:/tmp/.X11-unix --------------- 容器图形化界面设置
+      > -v /tmp/.X11-unix:/tmp/.X11-unix --------------- Container GUI Settings
 
-      >  -e DISPLAY=$DISPLAY  ---------------容器图形化界面设置
+      >  -e DISPLAY=$DISPLAY  ---------------Container GUI Settings
 
-      >  -w /opt/nvidia/deepstream/deepstream-6.0 ---------- 刚进入容器时所在的目录      
+      >  -w /opt/nvidia/deepstream/deepstream-6.0 ---------- The directory you were in when you first entered the container      
 
-      >  cv-detect-robot:v4.02 ----------------`cv-detect-robot`为镜像仓库名称，`v4.02`为镜像标签(tag)
+      >  cv-detect-robot:v4.02 ----------------`cv-detect-robot` is the image warehouse name, `v4.02` is the image tag (tag)
 
-      >  /bin/bash --------------------------------启动容器后启动bash(docker后台必须运行一个进程，否则容器就会退出)
+      >  /bin/bash --------------------------------Start bash after starting the container (a process must be running in the docker background, otherwise the container will exit)
       
-    - 运行以上指令后可从终端进入容器。如下图所示：
+    - After running the above command, you can enter the container from the terminal. As shown below:
      ![在这里插入图片描述](https://img-blog.csdnimg.cn/d60663490f6348f4b5724e86f7f89904.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6YOt5bu65rSL,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ## 3.安装x86版本的vscode(基于CDR的二次开发及子项目测试均可在vscode中进行)
