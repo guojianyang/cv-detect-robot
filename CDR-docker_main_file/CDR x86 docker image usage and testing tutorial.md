@@ -72,7 +72,7 @@
    - The python interface reads:
    When one of the three detection modes is running, the detection data will be dynamically written into the memory pointed to by `internal_memory.txt`, and the real-time detection data will be obtained by directly reading the dynamic data of the memory through python, and run `client. py` can do it.
    - C++ interface reading method:
-   When one of the three detection modes is running, the detection data will be dynamically written into the memory pointed to by `internal_memory.txt`, and the real-time detection data will be obtained by directly cyclically reading the dynamic data of the memory through the cpp program, compile and run` The `test_7.cpp` program under the cpp_io` folder
+   When one of the three detection modes is running, the detection data will be dynamically written into the memory pointed to by `internal_memory.txt`, and the real-time detection data will be obtained by directly cyclically reading the dynamic data of the memory through the cpp program, compile and run` The `test_7.cpp` program under the cpp_io` folder 
    
    
 ##  5.在vscode中测试deepstream-yolov5相关功能
